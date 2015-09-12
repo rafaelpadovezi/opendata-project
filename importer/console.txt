@@ -1,0 +1,4 @@
+Loaded country data!
+Loaded worldbank data!
+HDI data loaded!
+CPI data loaded!

@@ -1,0 +1,19 @@
+curl -o datafiles/worldbank/gc.dod.totl.gd.zs.zip http://api.worldbank.org/v2/en/indicator/gc.dod.totl.gd.zs?downloadformat=csv
+unzip datafiles/worldbank/gc.dod.totl.gd.zs.zip -d datafiles/worldbank/gc.dod.totl.gd.zs
+rm datafiles/worldbank/gc.dod.totl.gd.zs.zip
+rm datafiles/worldbank/gc.dod.totl.gd.zs/[Content_Types].xml
+
+curl -o datafiles/worldbank/se.xpd.totl.gb.zs.zip http://api.worldbank.org/v2/en/indicator/se.xpd.totl.gb.zs?downloadformat=csv
+unzip datafiles/worldbank/se.xpd.totl.gb.zs.zip -d datafiles/worldbank/se.xpd.totl.gb.zs
+rm datafiles/worldbank/se.xpd.totl.gb.zs.zip
+rm datafiles/worldbank/se.xpd.totl.gb.zs/[Content_Types].xml
+
+curl -o datafiles/worldbank/sh.xpd.publ.gx.zs.zip http://api.worldbank.org/v2/en/indicator/sh.xpd.publ.gx.zs?downloadformat=csv
+unzip datafiles/worldbank/sh.xpd.publ.gx.zs.zip -d datafiles/worldbank/sh.xpd.publ.gx.zs
+rm datafiles/worldbank/sh.xpd.publ.gx.zs.zip
+rm datafiles/worldbank/sh.xpd.publ.gx.zs/[Content_Types].xml
+
+curl -o datafiles/worldbank/ny.gdp.mktp.kd.zg.zip http://api.worldbank.org/v2/en/indicator/ny.gdp.mktp.kd.zg?downloadformat=csv
+unzip datafiles/worldbank/ny.gdp.mktp.kd.zg.zip -d datafiles/worldbank/ny.gdp.mktp.kd.zg
+rm datafiles/worldbank/ny.gdp.mktp.kd.zg.zip
+rm datafiles/worldbank/ny.gdp.mktp.kd.zg/[Content_Types].xml

@@ -1,0 +1,1 @@
+printjson( db.countries.find({_id: 'BRA'}).pretty().toArray() )

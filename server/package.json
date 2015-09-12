@@ -1,0 +1,14 @@
+{
+  "name": "opendata-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "rafaelpadovezi@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^2.0.42"
+  }
+}
