@@ -18,7 +18,11 @@ textParser('datafiles/cpi.csv', ',', function(err, result) {
   console.log(util.inspect(result[21], false, null));
 });*/
 
-Parser.parseTxtFile('datafiles/hdi.txt', function(err, result) {
+Parser.parseTxtFile('datafiles/misc/hdi.txt', function(err, result) {
+  console.log(util.inspect(result[29], false, null));
+});
+
+Parser.parseCsvFile('datafiles/misc/cpi.csv', function(err, result) {
   console.log(util.inspect(result[21], false, null));
 });
 
