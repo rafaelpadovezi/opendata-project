@@ -19,20 +19,22 @@ if (!String.prototype.endsWith) {
 
 function splitCsvLine(line) {
   var array = line.split(/[,]/g);
-  array.forEach(function(item, index) {
+
+  var newArray = [];
+  for (var i = 0; i < array.length; i++) {
+    var item = array[i];
     if (item.startsWith('"')) {
-      if (item.endsWith('"')) {
-        array[index] = item.substr(1, item.length - 2);
+      while (!item.endsWith('"')) {
+        i+=1;
+        item += ',' + array[i];
       }
-      else {
-        if ((!array[index + 1].startsWith('"')) && array[index + 1].endsWith('"')) {
-          array[index] = item.substr(1) + ',' + array[index + 1].substr(0, array[index + 1].length - 1);
-          array.splice(index + 1, 1);
-        }
-      }
+      newArray.push(item.substr(1, item.length - 2));
+    } else {
+      newArray.push(item);
     }
-  });
-  return array;//line.substr(0, line.length - 2).substr(1, line.length - 3).split('","');
+  }
+  
+  return newArray;
 }
 
 function parseDataRow(row, years) {

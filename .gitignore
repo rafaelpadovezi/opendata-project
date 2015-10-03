@@ -1,2 +1,4 @@
+node_modules/*
 importer/node_modules/*
 server/node_modules/*
+client/bower_components

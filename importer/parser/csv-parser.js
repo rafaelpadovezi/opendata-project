@@ -17,23 +17,23 @@ function csvParser(filename, callback) {
     yearsArray.shift();
     
     var indicator = filename.substr(filename.lastIndexOf('/') + 1).split('.')[0].toLowerCase();
-    var countries = [];
+    var indicatorArray = [];
     
     text.forEach(readRow);
     
-    callback(null, countries);
+    callback(null, indicatorArray);
     
     function readRow(rowItem) {
       var row = splitCsvLine(rowItem);
-      var country = {
-        name: row.shift()
+      
+      var registry = {
+        code: indicator,
+        countryName: row.shift()
       };
-      
-      country[indicator] = { };
-      
-      country[indicator].values = parseDataRow(row, yearsArray);
+ 
+      registry.values = parseDataRow(row, yearsArray);
 
-      countries.push(country);
+      indicatorArray.push(registry);
     }
   }
 }

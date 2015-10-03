@@ -1,0 +1,40 @@
+{
+  "name": "opendata-project",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve-dev",
+    "test": "mocha server/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaelpadovezi/opendata-project.git"
+  },
+  "author": "rafaelpadovezi@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafaelpadovezi/opendata-project/issues"
+  },
+  "homepage": "https://github.com/rafaelpadovezi/opendata-project",
+  "devDependencies": {
+    "browser-sync": "^2.9.3",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-util": "^3.0.6"
+  },
+  "dependencies": {
+    "angular": "^1.4.5",
+    "angular-bootstrap": "^0.12.2",
+    "angular-ui-router": "^0.2.15",
+    "bootstrap": "^3.3.5",
+    "breeze-client": "^1.5.5",
+    "breeze-client-labs": "^1.5.8",
+    "jquery": "^2.1.4",
+    "toastr": "^2.1.2"
+  }
+}

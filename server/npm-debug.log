@@ -1,0 +1,598 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/v0.10.35/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/v0.10.35/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'chai',
+1 verbose cli   'chai-as-promised',
+1 verbose cli   'mongo-mock',
+1 verbose cli   'node-inspector',
+1 verbose cli   'node-mocks-htpp',
+1 verbose cli   'rewire' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 warn package.json opendata-project@1.0.0 No description
+5 warn package.json opendata-project@1.0.0 No repository field.
+6 warn package.json opendata-project@1.0.0 No README data
+7 warn package.json breeze-mongodb@0.0.6 No repository field.
+8 warn package.json static@2.0.0 No repository field.
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'chai', null ]
+11 verbose cache add name=undefined spec="chai" args=["chai",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'chai',
+12 verbose parsed url   path: 'chai',
+12 verbose parsed url   href: 'chai' }
+13 verbose cache add [ 'chai-as-promised', null ]
+14 verbose cache add name=undefined spec="chai-as-promised" args=["chai-as-promised",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'chai-as-promised',
+15 verbose parsed url   path: 'chai-as-promised',
+15 verbose parsed url   href: 'chai-as-promised' }
+16 verbose cache add [ 'mongo-mock', null ]
+17 verbose cache add name=undefined spec="mongo-mock" args=["mongo-mock",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'mongo-mock',
+18 verbose parsed url   path: 'mongo-mock',
+18 verbose parsed url   href: 'mongo-mock' }
+19 verbose cache add [ 'node-inspector', null ]
+20 verbose cache add name=undefined spec="node-inspector" args=["node-inspector",null]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: 'node-inspector',
+21 verbose parsed url   path: 'node-inspector',
+21 verbose parsed url   href: 'node-inspector' }
+22 verbose cache add [ 'node-mocks-htpp', null ]
+23 verbose cache add name=undefined spec="node-mocks-htpp" args=["node-mocks-htpp",null]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: 'node-mocks-htpp',
+24 verbose parsed url   path: 'node-mocks-htpp',
+24 verbose parsed url   href: 'node-mocks-htpp' }
+25 verbose cache add [ 'rewire', null ]
+26 verbose cache add name=undefined spec="rewire" args=["rewire",null]
+27 verbose parsed url { protocol: null,
+27 verbose parsed url   slashes: null,
+27 verbose parsed url   auth: null,
+27 verbose parsed url   host: null,
+27 verbose parsed url   port: null,
+27 verbose parsed url   hostname: null,
+27 verbose parsed url   hash: null,
+27 verbose parsed url   search: null,
+27 verbose parsed url   query: null,
+27 verbose parsed url   pathname: 'rewire',
+27 verbose parsed url   path: 'rewire',
+27 verbose parsed url   href: 'rewire' }
+28 silly lockFile 353fd541-chai chai
+29 verbose lock chai /home/ubuntu/.npm/353fd541-chai.lock
+30 silly lockFile ce9a6452-chai-as-promised chai-as-promised
+31 verbose lock chai-as-promised /home/ubuntu/.npm/ce9a6452-chai-as-promised.lock
+32 silly lockFile 9f2d1668-mongo-mock mongo-mock
+33 verbose lock mongo-mock /home/ubuntu/.npm/9f2d1668-mongo-mock.lock
+34 silly lockFile 4198ef9e-node-inspector node-inspector
+35 verbose lock node-inspector /home/ubuntu/.npm/4198ef9e-node-inspector.lock
+36 silly lockFile 54dec73c-node-mocks-htpp node-mocks-htpp
+37 verbose lock node-mocks-htpp /home/ubuntu/.npm/54dec73c-node-mocks-htpp.lock
+38 silly lockFile f3133f19-rewire rewire
+39 verbose lock rewire /home/ubuntu/.npm/f3133f19-rewire.lock
+40 silly lockFile 353fd541-chai chai
+41 silly lockFile 353fd541-chai chai
+42 silly lockFile 9f2d1668-mongo-mock mongo-mock
+43 silly lockFile 9f2d1668-mongo-mock mongo-mock
+44 silly lockFile ce9a6452-chai-as-promised chai-as-promised
+45 silly lockFile ce9a6452-chai-as-promised chai-as-promised
+46 silly lockFile 4198ef9e-node-inspector node-inspector
+47 silly lockFile 4198ef9e-node-inspector node-inspector
+48 silly lockFile 54dec73c-node-mocks-htpp node-mocks-htpp
+49 silly lockFile 54dec73c-node-mocks-htpp node-mocks-htpp
+50 silly lockFile f3133f19-rewire rewire
+51 silly lockFile f3133f19-rewire rewire
+52 verbose addNamed [ 'chai', '' ]
+53 verbose addNamed [ null, '*' ]
+54 silly lockFile 583c5f63-chai chai@
+55 verbose lock chai@ /home/ubuntu/.npm/583c5f63-chai.lock
+56 verbose addNamed [ 'mongo-mock', '' ]
+57 verbose addNamed [ null, '*' ]
+58 silly lockFile 8138a955-mongo-mock mongo-mock@
+59 verbose lock mongo-mock@ /home/ubuntu/.npm/8138a955-mongo-mock.lock
+60 verbose addNamed [ 'chai-as-promised', '' ]
+61 verbose addNamed [ null, '*' ]
+62 silly lockFile e8557ce2-chai-as-promised chai-as-promised@
+63 verbose lock chai-as-promised@ /home/ubuntu/.npm/e8557ce2-chai-as-promised.lock
+64 verbose addNamed [ 'node-inspector', '' ]
+65 verbose addNamed [ null, '*' ]
+66 silly lockFile e68b88da-node-inspector node-inspector@
+67 verbose lock node-inspector@ /home/ubuntu/.npm/e68b88da-node-inspector.lock
+68 verbose addNamed [ 'node-mocks-htpp', '' ]
+69 verbose addNamed [ null, '*' ]
+70 silly lockFile ef880660-node-mocks-htpp node-mocks-htpp@
+71 verbose lock node-mocks-htpp@ /home/ubuntu/.npm/ef880660-node-mocks-htpp.lock
+72 verbose addNamed [ 'rewire', '' ]
+73 verbose addNamed [ null, '*' ]
+74 silly lockFile 51f9597a-rewire rewire@
+75 verbose lock rewire@ /home/ubuntu/.npm/51f9597a-rewire.lock
+76 silly addNameRange { name: 'chai', range: '*', hasData: false }
+77 silly addNameRange { name: 'mongo-mock', range: '*', hasData: false }
+78 silly addNameRange { name: 'chai-as-promised', range: '*', hasData: false }
+79 silly addNameRange { name: 'node-inspector', range: '*', hasData: false }
+80 silly addNameRange { name: 'node-mocks-htpp', range: '*', hasData: false }
+81 verbose request where is /mongo-mock
+82 verbose request registry https://registry.npmjs.org/
+83 verbose request id be6ca0a08c575f2d
+84 verbose url raw /mongo-mock
+85 verbose url resolving [ 'https://registry.npmjs.org/', './mongo-mock' ]
+86 verbose url resolved https://registry.npmjs.org/mongo-mock
+87 verbose request where is https://registry.npmjs.org/mongo-mock
+88 info trying registry request attempt 1 at 20:04:02
+89 http GET https://registry.npmjs.org/mongo-mock
+90 verbose request where is /chai-as-promised
+91 verbose request registry https://registry.npmjs.org/
+92 verbose url raw /chai-as-promised
+93 verbose url resolving [ 'https://registry.npmjs.org/', './chai-as-promised' ]
+94 verbose url resolved https://registry.npmjs.org/chai-as-promised
+95 verbose request where is https://registry.npmjs.org/chai-as-promised
+96 info trying registry request attempt 1 at 20:04:02
+97 http GET https://registry.npmjs.org/chai-as-promised
+98 verbose request where is /node-inspector
+99 verbose request registry https://registry.npmjs.org/
+100 verbose url raw /node-inspector
+101 verbose url resolving [ 'https://registry.npmjs.org/', './node-inspector' ]
+102 verbose url resolved https://registry.npmjs.org/node-inspector
+103 verbose request where is https://registry.npmjs.org/node-inspector
+104 info trying registry request attempt 1 at 20:04:02
+105 http GET https://registry.npmjs.org/node-inspector
+106 verbose request where is /node-mocks-htpp
+107 verbose request registry https://registry.npmjs.org/
+108 verbose url raw /node-mocks-htpp
+109 verbose url resolving [ 'https://registry.npmjs.org/', './node-mocks-htpp' ]
+110 verbose url resolved https://registry.npmjs.org/node-mocks-htpp
+111 verbose request where is https://registry.npmjs.org/node-mocks-htpp
+112 info trying registry request attempt 1 at 20:04:02
+113 http GET https://registry.npmjs.org/node-mocks-htpp
+114 silly addNameRange { name: 'rewire', range: '*', hasData: false }
+115 verbose request where is /rewire
+116 verbose request registry https://registry.npmjs.org/
+117 verbose url raw /rewire
+118 verbose url resolving [ 'https://registry.npmjs.org/', './rewire' ]
+119 verbose url resolved https://registry.npmjs.org/rewire
+120 verbose request where is https://registry.npmjs.org/rewire
+121 info trying registry request attempt 1 at 20:04:02
+122 http GET https://registry.npmjs.org/rewire
+123 verbose request where is /chai
+124 verbose request registry https://registry.npmjs.org/
+125 verbose url raw /chai
+126 verbose url resolving [ 'https://registry.npmjs.org/', './chai' ]
+127 verbose url resolved https://registry.npmjs.org/chai
+128 verbose request where is https://registry.npmjs.org/chai
+129 info trying registry request attempt 1 at 20:04:02
+130 verbose etag "4XRKD88ETVQ2DPK73C8SR21E4"
+131 http GET https://registry.npmjs.org/chai
+132 http 200 https://registry.npmjs.org/chai-as-promised
+133 silly registry.get cb [ 200,
+133 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+133 silly registry.get     etag: '"DFVJJ87QPCFEJZ4AY6M5GXN2D"',
+133 silly registry.get     'content-type': 'application/json',
+133 silly registry.get     'cache-control': 'max-age=60',
+133 silly registry.get     'content-length': '44413',
+133 silly registry.get     'accept-ranges': 'bytes',
+133 silly registry.get     date: 'Sat, 12 Sep 2015 20:04:02 GMT',
+133 silly registry.get     via: '1.1 varnish',
+133 silly registry.get     age: '0',
+133 silly registry.get     connection: 'keep-alive',
+133 silly registry.get     'x-served-by': 'cache-iad2141-IAD',
+133 silly registry.get     'x-cache': 'HIT',
+133 silly registry.get     'x-cache-hits': '1',
+133 silly registry.get     'x-timer': 'S1442088242.855260,VS0,VE13',
+133 silly registry.get     vary: 'Accept' } ]
+134 http 200 https://registry.npmjs.org/mongo-mock
+135 silly registry.get cb [ 200,
+135 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+135 silly registry.get     etag: '"DOBM3B4FSN0AHRDU4RYSME3K5"',
+135 silly registry.get     'content-type': 'application/json',
+135 silly registry.get     'cache-control': 'max-age=60',
+135 silly registry.get     'content-length': '18745',
+135 silly registry.get     'accept-ranges': 'bytes',
+135 silly registry.get     date: 'Sat, 12 Sep 2015 20:04:02 GMT',
+135 silly registry.get     via: '1.1 varnish',
+135 silly registry.get     age: '0',
+135 silly registry.get     connection: 'keep-alive',
+135 silly registry.get     'x-served-by': 'cache-dfw1820-DFW',
+135 silly registry.get     'x-cache': 'MISS',
+135 silly registry.get     'x-cache-hits': '0',
+135 silly registry.get     'x-timer': 'S1442088242.836307,VS0,VE87',
+135 silly registry.get     vary: 'Accept' } ]
+136 silly addNameRange number 2 { name: 'chai-as-promised', range: '*', hasData: true }
+137 silly addNameRange versions [ 'chai-as-promised',
+137 silly addNameRange   [ '1.0.0',
+137 silly addNameRange     '1.1.0',
+137 silly addNameRange     '1.2.0',
+137 silly addNameRange     '2.0.0',
+137 silly addNameRange     '2.1.0',
+137 silly addNameRange     '2.2.0',
+137 silly addNameRange     '3.0.0',
+137 silly addNameRange     '3.1.0',
+137 silly addNameRange     '3.2.0',
+137 silly addNameRange     '3.2.1',
+137 silly addNameRange     '3.2.2',
+137 silly addNameRange     '3.2.3',
+137 silly addNameRange     '3.2.4',
+137 silly addNameRange     '3.2.5',
+137 silly addNameRange     '3.3.0',
+137 silly addNameRange     '3.3.1',
+137 silly addNameRange     '4.0.0',
+137 silly addNameRange     '4.1.0',
+137 silly addNameRange     '4.1.1',
+137 silly addNameRange     '4.2.0',
+137 silly addNameRange     '4.3.0',
+137 silly addNameRange     '5.0.0',
+137 silly addNameRange     '5.1.0' ] ]
+138 verbose addNamed [ 'chai-as-promised', '5.1.0' ]
+139 verbose addNamed [ '5.1.0', '5.1.0' ]
+140 silly lockFile 01beef08-chai-as-promised-5-1-0 chai-as-promised@5.1.0
+141 verbose lock chai-as-promised@5.1.0 /home/ubuntu/.npm/01beef08-chai-as-promised-5-1-0.lock
+142 silly addNameRange number 2 { name: 'mongo-mock', range: '*', hasData: true }
+143 silly addNameRange versions [ 'mongo-mock',
+143 silly addNameRange   [ '1.0.0',
+143 silly addNameRange     '1.0.1',
+143 silly addNameRange     '1.0.2',
+143 silly addNameRange     '1.0.3',
+143 silly addNameRange     '1.1.0',
+143 silly addNameRange     '1.2.0',
+143 silly addNameRange     '1.2.1',
+143 silly addNameRange     '1.2.2',
+143 silly addNameRange     '1.2.3',
+143 silly addNameRange     '1.2.4',
+143 silly addNameRange     '1.2.5',
+143 silly addNameRange     '1.2.6',
+143 silly addNameRange     '1.2.7',
+143 silly addNameRange     '1.2.8' ] ]
+144 verbose addNamed [ 'mongo-mock', '1.2.8' ]
+145 verbose addNamed [ '1.2.8', '1.2.8' ]
+146 silly lockFile 13be83e4-mongo-mock-1-2-8 mongo-mock@1.2.8
+147 verbose lock mongo-mock@1.2.8 /home/ubuntu/.npm/13be83e4-mongo-mock-1-2-8.lock
+148 silly lockFile 83530f45-mised-chai-as-promised-5-1-0-tgz https://registry.npmjs.org/chai-as-promised/-/chai-as-promised-5.1.0.tgz
+149 verbose lock https://registry.npmjs.org/chai-as-promised/-/chai-as-promised-5.1.0.tgz /home/ubuntu/.npm/83530f45-mised-chai-as-promised-5-1-0-tgz.lock
+150 silly lockFile 8192d96c--mongo-mock-mongo-mock-1-2-8-tgz https://registry.npmjs.org/mongo-mock/-/mongo-mock-1.2.8.tgz
+151 verbose lock https://registry.npmjs.org/mongo-mock/-/mongo-mock-1.2.8.tgz /home/ubuntu/.npm/8192d96c--mongo-mock-mongo-mock-1-2-8-tgz.lock
+152 verbose addRemoteTarball [ 'https://registry.npmjs.org/chai-as-promised/-/chai-as-promised-5.1.0.tgz',
+152 verbose addRemoteTarball   'a95e7b5465123db538ddb36e3163c7be3a63f4ff' ]
+153 verbose addRemoteTarball [ 'https://registry.npmjs.org/mongo-mock/-/mongo-mock-1.2.8.tgz',
+153 verbose addRemoteTarball   'fa1cc9b526ee8f022d33e1217f60e38de196dc80' ]
+154 info retry fetch attempt 1 at 20:04:02
+155 verbose fetch to= /tmp/npm-16988-aD6FOPlg/registry.npmjs.org/chai-as-promised/-/chai-as-promised-5.1.0.tgz
+156 http GET https://registry.npmjs.org/chai-as-promised/-/chai-as-promised-5.1.0.tgz
+157 info retry fetch attempt 1 at 20:04:02
+158 verbose fetch to= /tmp/npm-16988-aD6FOPlg/registry.npmjs.org/mongo-mock/-/mongo-mock-1.2.8.tgz
+159 http GET https://registry.npmjs.org/mongo-mock/-/mongo-mock-1.2.8.tgz
+160 http 200 https://registry.npmjs.org/chai
+161 silly registry.get cb [ 200,
+161 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+161 silly registry.get     etag: '"57RW5NLJW12U46M1SR0I5IOND"',
+161 silly registry.get     'content-type': 'application/json',
+161 silly registry.get     'cache-control': 'max-age=60',
+161 silly registry.get     'content-length': '78869',
+161 silly registry.get     'accept-ranges': 'bytes',
+161 silly registry.get     date: 'Sat, 12 Sep 2015 20:04:02 GMT',
+161 silly registry.get     via: '1.1 varnish',
+161 silly registry.get     age: '15',
+161 silly registry.get     connection: 'keep-alive',
+161 silly registry.get     'x-served-by': 'cache-iad2141-IAD',
+161 silly registry.get     'x-cache': 'HIT',
+161 silly registry.get     'x-cache-hits': '1',
+161 silly registry.get     'x-timer': 'S1442088242.953642,VS0,VE0',
+161 silly registry.get     vary: 'Accept' } ]
+162 silly addNameRange number 2 { name: 'chai', range: '*', hasData: true }
+163 silly addNameRange versions [ 'chai',
+163 silly addNameRange   [ '0.0.1',
+163 silly addNameRange     '0.0.2',
+163 silly addNameRange     '0.1.0',
+163 silly addNameRange     '0.1.1',
+163 silly addNameRange     '0.1.2',
+163 silly addNameRange     '0.1.3',
+163 silly addNameRange     '0.1.4',
+163 silly addNameRange     '0.1.5',
+163 silly addNameRange     '0.1.6',
+163 silly addNameRange     '0.1.7',
+163 silly addNameRange     '0.2.0',
+163 silly addNameRange     '0.2.1',
+163 silly addNameRange     '0.2.2',
+163 silly addNameRange     '0.2.3',
+163 silly addNameRange     '0.2.4',
+163 silly addNameRange     '0.3.0',
+163 silly addNameRange     '0.3.1',
+163 silly addNameRange     '0.3.2',
+163 silly addNameRange     '0.3.3',
+163 silly addNameRange     '0.3.4',
+163 silly addNameRange     '0.4.0',
+163 silly addNameRange     '0.4.1',
+163 silly addNameRange     '0.4.2',
+163 silly addNameRange     '0.5.0',
+163 silly addNameRange     '0.5.1',
+163 silly addNameRange     '0.5.2',
+163 silly addNameRange     '0.5.3',
+163 silly addNameRange     '1.0.0',
+163 silly addNameRange     '1.0.1',
+163 silly addNameRange     '1.0.2',
+163 silly addNameRange     '1.0.3',
+163 silly addNameRange     '1.0.4',
+163 silly addNameRange     '1.1.0',
+163 silly addNameRange     '1.1.1',
+163 silly addNameRange     '1.2.0',
+163 silly addNameRange     '1.3.0',
+163 silly addNameRange     '1.4.0',
+163 silly addNameRange     '1.4.1',
+163 silly addNameRange     '1.4.2',
+163 silly addNameRange     '1.5.0',
+163 silly addNameRange     '1.6.0',
+163 silly addNameRange     '1.6.1',
+163 silly addNameRange     '1.7.0',
+163 silly addNameRange     '1.7.1',
+163 silly addNameRange     '1.7.2',
+163 silly addNameRange     '1.8.0',
+163 silly addNameRange     '1.8.1',
+163 silly addNameRange     '1.9.0',
+163 silly addNameRange     '1.9.1',
+163 silly addNameRange     '1.9.2',
+163 silly addNameRange     '1.10.0',
+163 silly addNameRange     '2.0.0',
+163 silly addNameRange     '2.1.0',
+163 silly addNameRange     '2.1.1',
+163 silly addNameRange     '2.1.2',
+163 silly addNameRange     '2.2.0',
+163 silly addNameRange     '2.3.0',
+163 silly addNameRange     '3.0.0',
+163 silly addNameRange     '3.1.0',
+163 silly addNameRange     '3.2.0' ] ]
+164 verbose addNamed [ 'chai', '3.2.0' ]
+165 verbose addNamed [ '3.2.0', '3.2.0' ]
+166 silly lockFile c3634feb-chai-3-2-0 chai@3.2.0
+167 verbose lock chai@3.2.0 /home/ubuntu/.npm/c3634feb-chai-3-2-0.lock
+168 silly lockFile c3634feb-chai-3-2-0 chai@3.2.0
+169 silly lockFile c3634feb-chai-3-2-0 chai@3.2.0
+170 silly lockFile 583c5f63-chai chai@
+171 silly lockFile 583c5f63-chai chai@
+172 http 404 https://registry.npmjs.org/node-mocks-htpp
+173 silly registry.get cb [ 404,
+173 silly registry.get   { 'content-type': 'application/json',
+173 silly registry.get     'cache-control': 'max-age=0',
+173 silly registry.get     'content-length': '2',
+173 silly registry.get     'accept-ranges': 'bytes',
+173 silly registry.get     date: 'Sat, 12 Sep 2015 20:04:03 GMT',
+173 silly registry.get     via: '1.1 varnish',
+173 silly registry.get     age: '0',
+173 silly registry.get     connection: 'keep-alive',
+173 silly registry.get     'x-served-by': 'cache-atl6227-ATL',
+173 silly registry.get     'x-cache': 'MISS',
+173 silly registry.get     'x-cache-hits': '0',
+173 silly registry.get     'x-timer': 'S1442088242.882739,VS0,VE118' } ]
+174 silly lockFile ef880660-node-mocks-htpp node-mocks-htpp@
+175 silly lockFile ef880660-node-mocks-htpp node-mocks-htpp@
+176 http 200 https://registry.npmjs.org/chai-as-promised/-/chai-as-promised-5.1.0.tgz
+177 silly lockFile 83530f45-mised-chai-as-promised-5-1-0-tgz https://registry.npmjs.org/chai-as-promised/-/chai-as-promised-5.1.0.tgz
+178 silly lockFile 83530f45-mised-chai-as-promised-5-1-0-tgz https://registry.npmjs.org/chai-as-promised/-/chai-as-promised-5.1.0.tgz
+179 silly lockFile 01beef08-chai-as-promised-5-1-0 chai-as-promised@5.1.0
+180 silly lockFile 01beef08-chai-as-promised-5-1-0 chai-as-promised@5.1.0
+181 silly lockFile e8557ce2-chai-as-promised chai-as-promised@
+182 silly lockFile e8557ce2-chai-as-promised chai-as-promised@
+183 http 200 https://registry.npmjs.org/rewire
+184 silly registry.get cb [ 200,
+184 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+184 silly registry.get     etag: '"AT96K9TJ0HCEKA6G5A0M46V25"',
+184 silly registry.get     'content-type': 'application/json',
+184 silly registry.get     'cache-control': 'max-age=60',
+184 silly registry.get     'content-length': '45546',
+184 silly registry.get     'accept-ranges': 'bytes',
+184 silly registry.get     date: 'Sat, 12 Sep 2015 20:04:03 GMT',
+184 silly registry.get     via: '1.1 varnish',
+184 silly registry.get     age: '0',
+184 silly registry.get     connection: 'keep-alive',
+184 silly registry.get     'x-served-by': 'cache-atl6222-ATL',
+184 silly registry.get     'x-cache': 'MISS',
+184 silly registry.get     'x-cache-hits': '0',
+184 silly registry.get     'x-timer': 'S1442088242.930070,VS0,VE96',
+184 silly registry.get     vary: 'Accept' } ]
+185 silly addNameRange number 2 { name: 'rewire', range: '*', hasData: true }
+186 silly addNameRange versions [ 'rewire',
+186 silly addNameRange   [ '0.1.0',
+186 silly addNameRange     '0.1.1',
+186 silly addNameRange     '0.1.2',
+186 silly addNameRange     '0.1.3',
+186 silly addNameRange     '0.2.0',
+186 silly addNameRange     '0.2.1',
+186 silly addNameRange     '0.2.2',
+186 silly addNameRange     '0.3.0',
+186 silly addNameRange     '0.3.1',
+186 silly addNameRange     '0.3.2',
+186 silly addNameRange     '1.0.0',
+186 silly addNameRange     '1.0.1',
+186 silly addNameRange     '1.0.2',
+186 silly addNameRange     '1.0.3',
+186 silly addNameRange     '1.0.4',
+186 silly addNameRange     '1.1.0',
+186 silly addNameRange     '1.1.1',
+186 silly addNameRange     '1.1.2',
+186 silly addNameRange     '1.1.3',
+186 silly addNameRange     '2.0.0',
+186 silly addNameRange     '2.0.1',
+186 silly addNameRange     '2.1.0',
+186 silly addNameRange     '2.1.1',
+186 silly addNameRange     '2.1.2',
+186 silly addNameRange     '2.1.3',
+186 silly addNameRange     '2.1.4',
+186 silly addNameRange     '2.1.5',
+186 silly addNameRange     '2.2.0',
+186 silly addNameRange     '2.3.0',
+186 silly addNameRange     '2.3.1',
+186 silly addNameRange     '2.3.2',
+186 silly addNameRange     '2.3.3',
+186 silly addNameRange     '2.3.4' ] ]
+187 verbose addNamed [ 'rewire', '2.3.4' ]
+188 verbose addNamed [ '2.3.4', '2.3.4' ]
+189 silly lockFile 5e7ee3f7-rewire-2-3-4 rewire@2.3.4
+190 verbose lock rewire@2.3.4 /home/ubuntu/.npm/5e7ee3f7-rewire-2-3-4.lock
+191 silly lockFile 02933fca-pmjs-org-rewire-rewire-2-3-4-tgz https://registry.npmjs.org/rewire/-/rewire-2.3.4.tgz
+192 verbose lock https://registry.npmjs.org/rewire/-/rewire-2.3.4.tgz /home/ubuntu/.npm/02933fca-pmjs-org-rewire-rewire-2-3-4-tgz.lock
+193 verbose addRemoteTarball [ 'https://registry.npmjs.org/rewire/-/rewire-2.3.4.tgz',
+193 verbose addRemoteTarball   'f3a40bc40af704bca740a1de5d53f636ee2d601c' ]
+194 info retry fetch attempt 1 at 20:04:03
+195 verbose fetch to= /tmp/npm-16988-aD6FOPlg/registry.npmjs.org/rewire/-/rewire-2.3.4.tgz
+196 http GET https://registry.npmjs.org/rewire/-/rewire-2.3.4.tgz
+197 http 200 https://registry.npmjs.org/mongo-mock/-/mongo-mock-1.2.8.tgz
+198 silly lockFile 8192d96c--mongo-mock-mongo-mock-1-2-8-tgz https://registry.npmjs.org/mongo-mock/-/mongo-mock-1.2.8.tgz
+199 silly lockFile 8192d96c--mongo-mock-mongo-mock-1-2-8-tgz https://registry.npmjs.org/mongo-mock/-/mongo-mock-1.2.8.tgz
+200 silly lockFile 13be83e4-mongo-mock-1-2-8 mongo-mock@1.2.8
+201 silly lockFile 13be83e4-mongo-mock-1-2-8 mongo-mock@1.2.8
+202 silly lockFile 8138a955-mongo-mock mongo-mock@
+203 silly lockFile 8138a955-mongo-mock mongo-mock@
+204 http 200 https://registry.npmjs.org/rewire/-/rewire-2.3.4.tgz
+205 silly lockFile 02933fca-pmjs-org-rewire-rewire-2-3-4-tgz https://registry.npmjs.org/rewire/-/rewire-2.3.4.tgz
+206 silly lockFile 02933fca-pmjs-org-rewire-rewire-2-3-4-tgz https://registry.npmjs.org/rewire/-/rewire-2.3.4.tgz
+207 silly lockFile 5e7ee3f7-rewire-2-3-4 rewire@2.3.4
+208 silly lockFile 5e7ee3f7-rewire-2-3-4 rewire@2.3.4
+209 silly lockFile 51f9597a-rewire rewire@
+210 silly lockFile 51f9597a-rewire rewire@
+211 http 200 https://registry.npmjs.org/node-inspector
+212 silly registry.get cb [ 200,
+212 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+212 silly registry.get     etag: '"4M76D5USYFNYCC3NFM7KV8HYT"',
+212 silly registry.get     'content-type': 'application/json',
+212 silly registry.get     'cache-control': 'max-age=60',
+212 silly registry.get     'content-length': '134154',
+212 silly registry.get     'accept-ranges': 'bytes',
+212 silly registry.get     date: 'Sat, 12 Sep 2015 20:04:03 GMT',
+212 silly registry.get     via: '1.1 varnish',
+212 silly registry.get     age: '0',
+212 silly registry.get     connection: 'keep-alive',
+212 silly registry.get     'x-served-by': 'cache-iad2127-IAD',
+212 silly registry.get     'x-cache': 'HIT',
+212 silly registry.get     'x-cache-hits': '1',
+212 silly registry.get     'x-timer': 'S1442088242.869356,VS0,VE373',
+212 silly registry.get     vary: 'Accept' } ]
+213 silly addNameRange number 2 { name: 'node-inspector', range: '*', hasData: true }
+214 silly addNameRange versions [ 'node-inspector',
+214 silly addNameRange   [ '0.0.1',
+214 silly addNameRange     '0.0.2',
+214 silly addNameRange     '0.0.3',
+214 silly addNameRange     '0.0.4',
+214 silly addNameRange     '0.1.0',
+214 silly addNameRange     '0.1.1',
+214 silly addNameRange     '0.1.2',
+214 silly addNameRange     '0.1.3',
+214 silly addNameRange     '0.1.4',
+214 silly addNameRange     '0.1.5',
+214 silly addNameRange     '0.1.6',
+214 silly addNameRange     '0.1.7',
+214 silly addNameRange     '0.1.8',
+214 silly addNameRange     '0.1.9',
+214 silly addNameRange     '0.1.10',
+214 silly addNameRange     '0.3.0',
+214 silly addNameRange     '0.3.1',
+214 silly addNameRange     '0.3.2',
+214 silly addNameRange     '0.3.3',
+214 silly addNameRange     '0.3.4',
+214 silly addNameRange     '0.4.0',
+214 silly addNameRange     '0.5.0',
+214 silly addNameRange     '0.6.0',
+214 silly addNameRange     '0.6.1',
+214 silly addNameRange     '0.6.2',
+214 silly addNameRange     '0.7.0-1',
+214 silly addNameRange     '0.2.0-beta1',
+214 silly addNameRange     '0.2.0-beta2',
+214 silly addNameRange     '0.2.0-beta3',
+214 silly addNameRange     '0.2.0-beta4',
+214 silly addNameRange     '0.3.0-preview1',
+214 silly addNameRange     '0.7.0-2',
+214 silly addNameRange     '0.7.0',
+214 silly addNameRange     '0.7.1',
+214 silly addNameRange     '0.7.2',
+214 silly addNameRange     '0.7.3',
+214 silly addNameRange     '0.7.4',
+214 silly addNameRange     '0.8.0',
+214 silly addNameRange     '0.8.1',
+214 silly addNameRange     '0.8.3',
+214 silly addNameRange     '0.9.0',
+214 silly addNameRange     '0.9.1',
+214 silly addNameRange     '0.9.2',
+214 silly addNameRange     '0.10.0',
+214 silly addNameRange     '0.10.1',
+214 silly addNameRange     '0.10.2',
+214 silly addNameRange     '0.11.0',
+214 silly addNameRange     '0.11.1',
+214 silly addNameRange     '0.11.2',
+214 silly addNameRange     '0.12.0',
+214 silly addNameRange     '0.12.1',
+214 silly addNameRange     '0.12.2',
+214 silly addNameRange     '0.12.3' ] ]
+215 verbose addNamed [ 'node-inspector', '0.12.3' ]
+216 verbose addNamed [ '0.12.3', '0.12.3' ]
+217 silly lockFile 6cee8bf8-node-inspector-0-12-3 node-inspector@0.12.3
+218 verbose lock node-inspector@0.12.3 /home/ubuntu/.npm/6cee8bf8-node-inspector-0-12-3.lock
+219 silly lockFile ce5ccca3-pector-node-inspector-0-12-3-tgz https://registry.npmjs.org/node-inspector/-/node-inspector-0.12.3.tgz
+220 verbose lock https://registry.npmjs.org/node-inspector/-/node-inspector-0.12.3.tgz /home/ubuntu/.npm/ce5ccca3-pector-node-inspector-0-12-3-tgz.lock
+221 verbose addRemoteTarball [ 'https://registry.npmjs.org/node-inspector/-/node-inspector-0.12.3.tgz',
+221 verbose addRemoteTarball   '238d0c9f4e6ca720e21b9a547aacbfde665beace' ]
+222 info retry fetch attempt 1 at 20:04:03
+223 verbose fetch to= /tmp/npm-16988-aD6FOPlg/registry.npmjs.org/node-inspector/-/node-inspector-0.12.3.tgz
+224 http GET https://registry.npmjs.org/node-inspector/-/node-inspector-0.12.3.tgz
+225 http 200 https://registry.npmjs.org/node-inspector/-/node-inspector-0.12.3.tgz
+226 silly lockFile ce5ccca3-pector-node-inspector-0-12-3-tgz https://registry.npmjs.org/node-inspector/-/node-inspector-0.12.3.tgz
+227 silly lockFile ce5ccca3-pector-node-inspector-0-12-3-tgz https://registry.npmjs.org/node-inspector/-/node-inspector-0.12.3.tgz
+228 silly lockFile 6cee8bf8-node-inspector-0-12-3 node-inspector@0.12.3
+229 silly lockFile 6cee8bf8-node-inspector-0-12-3 node-inspector@0.12.3
+230 silly lockFile e68b88da-node-inspector node-inspector@
+231 silly lockFile e68b88da-node-inspector node-inspector@
+232 error 404 Not Found
+232 error 404
+232 error 404 'node-mocks-htpp' is not in the npm registry.
+232 error 404 You should bug the author to publish it
+232 error 404 It was specified as a dependency of 'opendata-project'
+232 error 404
+232 error 404 Maybe try 'npm search mocks htpp'
+232 error 404
+232 error 404 Note that you can also install from a
+232 error 404 tarball, folder, or http url, or git url.
+233 error System Linux 3.14.13-c9
+234 error command "/home/ubuntu/.nvm/v0.10.35/bin/node" "/home/ubuntu/.nvm/v0.10.35/bin/npm" "install" "--save-dev" "chai" "chai-as-promised" "mongo-mock" "node-inspector" "node-mocks-htpp" "rewire"
+235 error cwd /home/ubuntu/workspace/server
+236 error node -v v0.10.35
+237 error npm -v 1.4.28
+238 error code E404
+239 verbose exit [ 1, true ]

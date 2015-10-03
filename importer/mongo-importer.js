@@ -9,21 +9,41 @@ var url = 'mongodb://localhost:27017/opendata-project';
 var wbdfiles = [];
 var miscFiles = [];
 var countriesFile = 'datafiles/worldbank/Metadata_Country.csv';
+var countryData;
+var indicatorData = [];
 
 MongoClient.connect(url, connect);
 
 function connect(err, db) {
   if(err) { return console.log(err); }
-  var collection = db.collection('countries');
+  var countriesCollection = db.collection('countries');
+  var indicatorsCollection = db.collection('indicators');
   
   return Q.nfcall(Parser.parseCountries, countriesFile)
-    .then(parseCountries)
+    .then(loadCountries)
     .then(onCountryDataLoad)
     .then(parseWorldbankData)
     .then(onWorldbankDataLoad)
     .then(parseMiscFiles)
     .then(function(results) {
-      console.log('Misc data loaded!');
+      var inserts = [];
+      
+      indicatorData.forEach(function(item) {
+        console.log(item);
+        if (!item.country) {
+          item.country = getCountryCode(countryData, item.countryName);
+        }
+        if(item.country){
+          
+          inserts.push(function(callback) {
+            indicatorsCollection.insertOne(item, callback);
+          });
+        }
+      });
+      return Q.nfcall(async.parallel, inserts);
+    })
+    .then(function() {
+      
     })
     .fail(onFail)
     .fin(function() {
@@ -31,11 +51,12 @@ function connect(err, db) {
     });
   
   function parseCountries(countries) {
+    countryData = countries;
     var inserts = [];
     countries.forEach(function(country) {
       if (country._id === '') { return; }
       inserts.push(function(callback) {
-        collection.updateOne({ _id: country._id}, country, { upsert: true }, callback);  
+        countriesCollection.updateOne({ _id: country._id}, country, { upsert: true }, callback);  
       });
     });
     return Q.nfcall(async.parallel, inserts);
@@ -74,8 +95,9 @@ function connect(err, db) {
   function parseMiscFiles(results) {
     var updates = [];
     
-    results.forEach(function(countries) {
-      countries.forEach(function(country) {
+    results[0].forEach(function(indicator) {
+      indicatorData.push(indicator);
+      /*countries.forEach(function(country) {
         var setExpression = { };
         Object.keys(country).forEach(function(key) {
           if (key === 'name') { return; }
@@ -85,7 +107,7 @@ function connect(err, db) {
         updates.push(function(callback) {
           collection.updateOne({name: country.name}, { $set: setExpression }, callback); 
         });
-      });
+      });*/
     });
     
     return Q.nfcall(async.parallel, updates);
@@ -94,8 +116,9 @@ function connect(err, db) {
   function parseWorldbankData(results) {
     
     var updates = [];
-    results.forEach(function(countries) {
-      countries.forEach(function(country) {
+    results[0].forEach(function(indicator) {
+      indicatorData.push(indicator);
+      /*countries.forEach(function(country) {
         if (country._id === '') { return; }
         var setExpression = { };
         
@@ -106,7 +129,7 @@ function connect(err, db) {
         updates.push(function(callback) {
           collection.updateOne({ _id: country._id}, { $set: setExpression }, callback); 
         });
-      });
+      });*/
     });
 
     return Q.nfcall(async.parallel, updates);
@@ -137,4 +160,14 @@ function walkMiscFiles(err, dirPath, dirs, files) {
   files.forEach(function(item) {
     miscFiles.push(item);
   });
+}
+
+function getCountryCode(countries, name) {
+
+  countries.forEach(function(item) {
+    if (item.name == name){
+      return item._id;
+    }
+  });
+  return undefined;
 }

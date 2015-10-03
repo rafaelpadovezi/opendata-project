@@ -10,6 +10,7 @@ module.exports = wbdParser;
 function wbdParser(filename, callback) {
   var path = filename.substr(0, filename.lastIndexOf('/') + 1);
   var file = filename.substr(filename.lastIndexOf('/') + 1);
+  
   async.parallel([
     async.apply(parseData, filename),
     async.apply(parseIndicator, path + 'Metadata_Indicator_' + file)
@@ -19,17 +20,15 @@ function wbdParser(filename, callback) {
   function mergeData(err, results) {
     if(err) { return callback(err); }
 
-    var countries = results[0];
-    var indicator = results[1];
+    var indicatorArray = results[0];
+    var indicatorMetadata = results[1];
     
-    countries.forEach(merge);
+    indicatorArray.forEach(merge);
     
-    callback(null, countries);
+    callback(null, indicatorArray);
     
-    function merge(country) {
-      country[indicator.code].name = indicator.name;
-      country[indicator.code].description = indicator.description;
-      country[indicator.code].source = indicator.source;
+    function merge(indicator) {
+      indicator.description = indicatorMetadata.description;
     }
   }
 }
@@ -39,7 +38,7 @@ function parseData(filename, callback) {
   fs.readFile(filename, readfile);
 
   function readfile(err, data) {
-    var countries = [];
+    var indicatorArray = [];
     if(err) return callback(err);
 
     var text = data.toString().split(/[\r\n]+/g);
@@ -51,6 +50,8 @@ function parseData(filename, callback) {
 
     text.forEach(parseRow);
 
+    callback(null, indicatorArray);
+    
     function parseRow(item) {
       var row = splitCsvLine(item);
       var countryName = row.shift();
@@ -59,21 +60,18 @@ function parseData(filename, callback) {
       var indicatorName = row.shift();
       var indicator = row.shift();
 
-      var country = {
-        _id: countryCode,
-        name: countryName
-      };
-      country[indicator] = {
+      var registry = {
+        code : indicator,
         name: indicatorName,
-        source: dataSource
+        source: dataSource,
+        countryName: countryName,
+        country: countryCode
       };
+      
+      registry.values = parseDataRow(row, yearsArray);
 
-      country[indicator].values = parseDataRow(row, yearsArray);
-
-      countries.push(country);
+      indicatorArray.push(registry);
     }
-
-    callback(null, countries);
   }
 }
 
@@ -92,6 +90,6 @@ function parseIndicator(filename, callback) {
       source: row[3]
     };
     
-    callback(null, indicator)
+    callback(null, indicator);
   }
 }

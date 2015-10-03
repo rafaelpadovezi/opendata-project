@@ -13,7 +13,7 @@ function textParser(filename, separator, callback) {
   fs.readFile(filename, readfile);
 
   function readfile(err, data) {
-    var countries = [];
+    var indicatorArray = [];
     if(err) return callback(err);
 
     var text = data.toString().split(/[\r\n]+/g);
@@ -23,20 +23,19 @@ function textParser(filename, separator, callback) {
 
     text.forEach(parseRow);
     
-    callback(null, countries);
+    callback(null, indicatorArray);
     
     function parseRow(item) {
       var row = item.split(separator);
-      var countryName = row.shift();
-
-      var country = {
-        name: countryName,
-      };
-      country[indicator] = { };
       
-      country[indicator].values = parseDataRow(row, yearsArray);
+      var registry = {
+        code: indicator,
+        countryName: row.shift()
+      };
+      
+      registry.values = parseDataRow(row, yearsArray);
 
-      countries.push(country);
+      indicatorArray.push(registry);
     }
   }
 }

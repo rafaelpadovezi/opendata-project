@@ -9,6 +9,31 @@
   "author": "rafaelpadovezi@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "mongodb": "^2.0.42"
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.13.3",
+    "breeze-mongodb": "0.0.6",
+    "chalk": "^1.1.1",
+    "compression": "^1.5.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "favicon": "0.0.2",
+    "mongodb": "^2.0.42",
+    "morgan": "^1.6.1",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "q": "^1.4.1",
+    "readable-stream": "^2.0.2",
+    "serve-static": "^1.10.0",
+    "static": "^2.0.0",
+    "static-favicon": "^2.0.0-alpha"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-as-promised": "^5.1.0",
+    "mongo-mock": "^1.2.8",
+    "node-inspector": "^0.12.3",
+    "node-mocks-http": "^1.4.3",
+    "rewire": "^2.3.4"
   }
 }

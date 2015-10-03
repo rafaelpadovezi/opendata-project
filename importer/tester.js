@@ -26,6 +26,12 @@ Parser.parseCsvFile('datafiles/misc/cpi.csv', function(err, result) {
   console.log(util.inspect(result[21], false, null));
 });
 
+var file = 'datafiles/worldbank/gc.dod.totl.gd.zs/gc.dod.totl.gd.zs_Indicator_en_csv_v2.csv';
+Parser.parseWorldbankData(file, function(err, result) {
+  if (err) return console.log(err);
+  console.log(util.inspect(result[40], false, null));
+});
+
 /*wbdParser('datafiles/worldbank/gc.dod.totl.gd.zs/gc.dod.totl.gd.zs_Indicator_en_csv_v2.csv',
   function(err, result) {
     if (err) return console.log(err);
@@ -33,20 +39,20 @@ Parser.parseCsvFile('datafiles/misc/cpi.csv', function(err, result) {
     //console.log(result[40]);
   });
 */
-wbdParser('datafiles/worldbank/ny.gdp.mktp.kd.zg/ny.gdp.mktp.kd.zg_Indicator_en_csv_v2.csv',
+/*wbdParser('datafiles/worldbank/ny.gdp.mktp.kd.zg/ny.gdp.mktp.kd.zg_Indicator_en_csv_v2.csv',
 function(err, result) {
     if (err) return console.log(err);
     console.log(util.inspect(result[27], false, null));
     //console.log(result[40]);
-  });
+  });*/
 
-/*countryParser('datafiles/worldbank/Metadata_Country.csv',
+countryParser('datafiles/worldbank/Metadata_Country.csv',
   function(err, result) {
-    /*if (err) { return console.log(err); }
+    if (err) { return console.log(err); }
     result.filter(function(item) {
       return item._id === '';
     }).forEach(function(item) {
       console.log(util.inspect(item, false, null));
     });
     console.log(util.inspect(result[28], false, null));
-  });*/
+  });
