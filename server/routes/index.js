@@ -26,7 +26,9 @@ function parseResource(resource) {
     case 'Country':
       return repository.getCountries;
       break;
-    
+    case 'Indicator':
+      return repository.getIndicators;
+      break;
     default:
       // code
   }
