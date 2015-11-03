@@ -1,8 +1,8 @@
 (function(module) {
   
-  module.factory('dataService', ['breeze', 'entityManagerFactory', '$q', factory]);
+  module.factory('dataService', ['breeze', 'entityManagerFactory', '$q', '$http', 'apiService', factory]);
   
-  function factory(breeze, entityManagerFactory, $q) {
+  function factory(breeze, entityManagerFactory, $q, $http, apiService) {
     var manager = entityManagerFactory.getManager();
     var Predicate = breeze.Predicate;
     
@@ -14,7 +14,9 @@
         .from('Indicator');
         
     var service = {
-      getIndicator: getIndicator
+      getIndicator: getIndicator,
+      getIndicatorList: getIndicatorList,
+      getCountries: getCountries
     };
     
     return service;
@@ -31,16 +33,30 @@
       return manager.executeQuery(query)
           .then(onResponse)
           .catch(onError);
-          
-      function onResponse(data) {
-        return data.results;
-      }
+    }
+    
+    function getIndicatorList() {
+      return $http.get(apiService.serviceName + 'IndicatorList')
+        .then(function(data) {
+          return data.data;
+        })
+        .catch(onError);
+    }
+    
+    function getCountries() {
+      var query = countryQuery;
+      return manager.executeQuery(query)
+        .then(onResponse)
+        .catch(onError);
     }
     
     function onError(err) {
       console.log(err);
     }
     
+    function onResponse(data) {
+      return data.results;
+    }
   }
   
 })(angular.module('app'));

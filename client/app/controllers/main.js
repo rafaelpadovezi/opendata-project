@@ -1,8 +1,8 @@
 (function(module) {
   
-  module.controller('main', ['dataService', '$timeout', controller]);
+  module.controller('main', ['dataService', '$timeout', 'optionsService', controller]);
   
-  function controller(dataService, $timeout) {
+  function controller(dataService, $timeout, optionsService) {
     var vm = this;
     
     vm.data = undefined;
@@ -13,25 +13,30 @@
       }
     };
     
-    dataService.getIndicator('NY.GDP.MKTP.KD.ZG', ['BRA', 'USA'])
-      .then(function(data) {
+    optionsService.onChangeOptions(function(options) {
+      if (!options.indicator)
+        return;
+      if (!options.countries)
+        return;
+      if (options.countries.length === 0)
+        return;
         
-        vm.data = parseData(data);
-        vm.options.axisLabel = {
-            x: 'Year',
-            y: data[0].name,
-          };
-
+      var countriesIds = _.map(options.countries, function(country) {
+        return country._id;
       });
-      
-    /*$timeout(function() {
-      dataService.getIndicator('NY.GDP.MKTP.KD.ZG', ['BRA', 'CAN'])
-      .then(function(data) {
         
-        vm.data = parseData(data);
-      });
-    }, 2000);*/
+      dataService.getIndicator(options.indicator.code, countriesIds)
+        .then(getData);
+    });
     
+    function getData(data) {
+      vm.data = parseData(data);
+      vm.options.axisLabel = {
+          x: 'Year',
+          y: data[0].name,
+        };
+    }
+
     vm.toggleSize = function() {
       if (vm.options.size.w === 800) {
         vm.options.size.w = 600;

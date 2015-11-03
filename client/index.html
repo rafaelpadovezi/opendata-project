@@ -6,35 +6,127 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
     
+    <!-- 3rd Party CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/toastr/toastr.css">
     <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.min.css">
+    <link rel="stylesheet" href="bower_components/oi.select/dist/select.css">
+    <!-- Project CSS -->
+    <link href="css/project.css" rel="stylesheet">
   </head>
-  <body ng-controller="main as vm">
-    <div class="radio" ng-init="vm.chartType = 'barChart'">
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios1" value="lineChart"
-          ng-model="vm.chartType" checked>
-        Line chart
-      </label>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">OPEN DATA PROJECT</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">        
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-md-2 col-md-offset-2 block">
+                <h2>Compare countries</h2>
+                <p>Chose the countries and compare the historical data between then.</p>                
+            </div>
+            <!-- /.col-md-4 -->
+            <div class="col-md-2 col-md-offset-1 block">
+                <h2>Explore Budgets</h2>
+                <p>Different visualizations for the budget of many countries</p>                
+            </div>
+            <!-- /.col-md-4 -->
+            <div class="col-md-2 col-md-offset-1 block">
+                <h2>Experiment</h2>
+                <p>Combine data and create new creative visualizations.</p>                
+            </div>
+            <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+				
+			<!-- Main -->
+			<div class="row main">
+				<!-- Sidebar -->
+				<div class="col-md-3">
+				  <div  ng-controller="countryPicker as vm">
+            <label>Chose the countries</label>
+					  <oi-select
+              oi-options="country.name for country in vm.countries"
+              ng-model="vm.country"
+              multiple
+              placeholder="Countries"
+            ></oi-select>
+				  </div>
+				  <div  ng-controller="indicatorPicker as vm">
+            <label>Chose the indicator</label>
+					  <oi-select
+              oi-options="indicator.name for indicator in vm.indicators track by indicator._id"
+              ng-model="vm.indicator"
+              placeholder="Indicator"
+            ></oi-select>
+					  </div>
+					</div>
+					<!-- /.col-md-3 -->
+					<!-- Visualization -->
+					<div class="col-md-9" ng-controller="main as vm">
+					  <div class="radio" ng-init="vm.chartType = 'lineChart'">
+              <label>
+                <input type="radio" name="optionsRadios" id="lineChartOptions" value="lineChart"
+                  ng-model="vm.chartType">
+                Line chart
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="barChartOptions" value="barChart"
+                  ng-model="vm.chartType">
+                Bar chart
+              </label>
+            </div>
+					  <line-chart ng-if="vm.chartType === 'lineChart'" data="vm.data" options="vm.options">
+            </line-chart>
+            <bar-chart ng-if="vm.chartType === 'barChart'" data="vm.data" options="vm.options">
+            </bar-chart>
+					</div>
+					<!-- /.col-md-9 -->
+				</div>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Open Data Project 2015</p>
+                </div>
+            </div>
+        </footer>
+
     </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios2" value="barChart"
-          ng-model="vm.chartType">
-        Bar chart
-      </label>
-    </div>
-    
-    <button id="btnToggleSize" class="btn btn-default" ng-click="vm.toggleSize()">Toggle Size</button>
-    
-    <line-chart ng-if="vm.chartType === 'lineChart'" data="vm.data" options="vm.options">
-    </line-chart>
-    <bar-chart ng-if="vm.chartType === 'barChart'" data="vm.data" options="vm.options">
-    </bar-chart>
+    <!-- /.container -->
     <!-- Basic Stuff -->
     <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
-    <script type="text/javascript" src="bower_components/mingo/mingo.min.js"></script>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/toastr/toastr.min.js"></script>
@@ -45,6 +137,8 @@
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- Angular plugins -->
+    <script type="text/javascript" src="bower_components/oi.select/dist/select-tpls.min.js"></script>
     <!-- Breeze -->
     <script type="text/javascript" src="bower_components/breeze-client/build/breeze.debug.js"></script>
     <script type="text/javascript" src="bower_components/breeze-client/build/adapters/breeze.bridge.angular.js"></script>
@@ -53,10 +147,14 @@
     
     <!-- My Angular Files -->
     <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/services/apiService.js"></script>
     <script type="text/javascript" src="app/services/metadata.js"></script>
     <script type="text/javascript" src="app/services/entityManagerFactory.js"></script>
     <script type="text/javascript" src="app/services/dataService.js"></script>
+    <script type="text/javascript" src="app/services/optionsService.js"></script>
     <script type="text/javascript" src="app/controllers/main.js"></script>
+    <script type="text/javascript" src="app/controllers/countryPicker.js"></script>
+    <script type="text/javascript" src="app/controllers/indicatorPicker.js"></script>
     <!-- My Angular/D3 Files -->
     <script type="text/javascript" src="app/d3/d3Service.js"></script>
     <script type="text/javascript" src="app/d3/d3plusService.js"></script>

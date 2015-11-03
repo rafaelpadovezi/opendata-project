@@ -1,10 +1,9 @@
 (function(module) {
     
-  module.factory('entityManagerFactory', ['breeze', 'metadata', factory]);
+  module.factory('entityManagerFactory', ['breeze', 'metadata', 'apiService', factory]);
 
-  function factory(breeze, metadata) {
-    var serviceRoot = window.location.protocol + '//' + window.location.host + '/';
-    var serviceName = serviceRoot + 'api/';
+  function factory(breeze, metadata, apiService) {
+    var serviceName = apiService.serviceName;
     
     var masterManager = null;
     
