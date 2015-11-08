@@ -1,8 +1,8 @@
 (function(module) {
   
-  module.controller('main', ['dataService', '$timeout', 'optionsService', controller]);
+  module.controller('main', ['dataService', 'optionsService', controller]);
   
-  function controller(dataService, $timeout, optionsService) {
+  function controller(dataService, optionsService) {
     var vm = this;
     
     vm.data = undefined;

@@ -1,0 +1,1 @@
+mongoimport --db opendata-project --collection budgets --file brazil-2014.json 

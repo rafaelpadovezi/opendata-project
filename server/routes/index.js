@@ -31,6 +31,8 @@ function parseResource(resource) {
       break;
     case 'IndicatorList':
       return repository.getIndicatorList;
+    case 'Budget':
+      return repository.getBudget;
     default:
       // code
   }

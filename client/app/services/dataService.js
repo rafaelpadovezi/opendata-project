@@ -12,8 +12,12 @@
     var indicatorQuery = 
       new breeze.EntityQuery()
         .from('Indicator');
+    var budgetQuery =
+      new breeze.EntityQuery()
+        .from('Budget');
         
     var service = {
+      getBudget: getBudget,
       getIndicator: getIndicator,
       getIndicatorList: getIndicatorList,
       getCountries: getCountries
@@ -48,6 +52,17 @@
       return manager.executeQuery(query)
         .then(onResponse)
         .catch(onError);
+    }
+    
+    function getBudget(code, year) {
+      var query = budgetQuery
+        .where('code', 'eq', code)
+        .where('name', 'eq', year);
+      return manager.executeQuery(query)
+          .then(function(data) {
+            return data.httpResponse.data;
+          })
+          .catch(onError);
     }
     
     function onError(err) {

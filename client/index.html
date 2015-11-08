@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="bower_components/oi.select/dist/select.css">
     <!-- Project CSS -->
     <link href="css/project.css" rel="stylesheet">
+    <link href="css/graphs.css" rel="stylesheet">
   </head>
   <body>
 
@@ -92,6 +93,10 @@
 					</div>
 					<!-- /.col-md-3 -->
 					<!-- Visualization -->
+					<div class="col-md-9" ng-controller="budget as vm">
+					  <chart data="vm.data[0]" options="vm.options" type="vm.chartType" />
+					</div>
+					<!--
 					<div class="col-md-9" ng-controller="main as vm">
 					  <div class="radio" ng-init="vm.chartType = 'lineChart'">
               <label>
@@ -111,7 +116,7 @@
             </line-chart>
             <bar-chart ng-if="vm.chartType === 'barChart'" data="vm.data" options="vm.options">
             </bar-chart>
-					</div>
+					</div>-->
 					<!-- /.col-md-9 -->
 				</div>
         <!-- Footer -->
@@ -153,6 +158,7 @@
     <script type="text/javascript" src="app/services/dataService.js"></script>
     <script type="text/javascript" src="app/services/optionsService.js"></script>
     <script type="text/javascript" src="app/controllers/main.js"></script>
+    <script type="text/javascript" src="app/controllers/budget.js"></script>
     <script type="text/javascript" src="app/controllers/countryPicker.js"></script>
     <script type="text/javascript" src="app/controllers/indicatorPicker.js"></script>
     <!-- My Angular/D3 Files -->
@@ -161,5 +167,6 @@
     <script type="text/javascript" src="app/d3/nvd3Service.js"></script>
     <script type="text/javascript" src="app/d3/graphs/lineChart.js"></script>
     <script type="text/javascript" src="app/d3/graphs/barChart.js"></script>
+    <script type="text/javascript" src="app/d3/graphs/chart.js"></script>
   </body>
 </html>

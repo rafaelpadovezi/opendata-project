@@ -20,9 +20,34 @@
       var LUID = DT.Int32; // "Lookup" Id
       var ID = DT.MongoObjectId; // Root entity Id
       
+      addBudget();
+      addBudgetNode();
       addCountry();
       addTabularData();
       addIndicator();
+      
+      function addBudget() {
+        addType({
+          name: 'Budget',
+          dataProperties: {
+            _id: { type: ID, isPartOfKey: true},
+            code: { maxLength: 3, required: true },
+            countryName: {maxLength:255, required: true },
+            name: { maxLength: 63, required: true }
+          }
+        });
+      }
+      
+      function addBudgetNode() {
+        addType({
+          name: 'budgetNode',
+          dataProperties: {
+            code: { maxLength: 15, required: true, isPartOfKey: true },
+            name: { maxLength: 255, required: true },
+            size: { type: DECIMAL, required: true }
+          }
+        });
+      }
       
       function addCountry() {
         addType({

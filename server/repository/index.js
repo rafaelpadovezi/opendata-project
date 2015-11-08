@@ -5,8 +5,28 @@ var getDb = require('../database').getDb;
 module.exports = {
   getCountries: getCountries,
   getIndicators: getIndicators,
-  getIndicatorList: getIndicatorList
+  getIndicatorList: getIndicatorList,
+  getBudget: getBudget
 };
+
+function getBudget(queryString) {
+  return Q.promise(theBudget);
+  
+  function theBudget(resolve, reject, notify) {
+    getDb().then(queryDb);
+    
+    function queryDb(db) {
+      var query = new bmongo.MongoQuery(queryString);
+      query.execute(db, 'budgets', function(err, results) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(results);
+        }
+      });
+    }
+  }
+}
 
 function getCountries(queryString) {
   return Q.promise(theCountries);
