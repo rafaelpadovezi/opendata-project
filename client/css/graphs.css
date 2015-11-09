@@ -13,3 +13,8 @@
 #percentage {
   font-size: 2.5em;
 }
+/* bubble */
+.bubble-text {
+  font-size: 13px;
+  font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
+}

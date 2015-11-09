@@ -25,14 +25,14 @@ function parseResource(resource) {
   switch (resource) {
     case 'Country':
       return repository.getCountries;
-      break;
     case 'Indicator':
       return repository.getIndicators;
-      break;
     case 'IndicatorList':
       return repository.getIndicatorList;
     case 'Budget':
       return repository.getBudget;
+    case 'BudgetList':
+      return repository.getBudgetList;
     default:
       // code
   }

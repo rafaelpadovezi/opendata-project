@@ -5,32 +5,20 @@
   
   function controller(dataService, optionsService) {
     var vm = this;
-    vm.chartType = "sunburstChart";
     
     vm.data = undefined;
     vm.options = {
       size: {
         w: 600,
-        h: 400
+        h: 600
       }
     };
     
-    dataService.getBudget('BRA', '2014')
-        .then(getData);
-    
     optionsService.onChangeOptions(function(options) {
-      if (!options.indicator)
+      if (!options.budget)
         return;
-      if (!options.countries)
-        return;
-      if (options.countries.length === 0)
-        return;
-      /* global _ */
-      var countriesIds = _.map(options.countries, function(country) {
-        return country._id;
-      });
         
-      dataService.getBudget('BRA', '2014')
+      dataService.getBudget(options.budget.code, options.budget.year)
         .then(getData);
     });
     

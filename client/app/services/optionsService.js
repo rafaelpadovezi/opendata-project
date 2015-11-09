@@ -9,13 +9,20 @@
     //register an observer
     function registerObserverCallback (callback){
       observerCallbacks.push(callback);
-    };
+    }
   
-    //call this when you know 'foo' has been changed
     function setCountries(countries) {
       options.countries = countries;
       notifyObservers();
-    };
+    }
+    
+    function setBudget(budget) {
+      options.budget = {
+        year: budget.year,
+        code: budget.code
+      };
+      notifyObservers();
+    }
     
     function setIndicator(indicator) {
       options.indicator = indicator;
@@ -31,8 +38,9 @@
     return {
       onChangeOptions: registerObserverCallback,
       setCountries: setCountries,
-      setIndicator: setIndicator
-    }
+      setIndicator: setIndicator,
+      setBudget: setBudget
+    };
   }
   
 })(angular.module('app'));

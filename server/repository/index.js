@@ -6,7 +6,8 @@ module.exports = {
   getCountries: getCountries,
   getIndicators: getIndicators,
   getIndicatorList: getIndicatorList,
-  getBudget: getBudget
+  getBudget: getBudget,
+  getBudgetList: getBudgetList
 };
 
 function getBudget(queryString) {
@@ -77,10 +78,41 @@ function getIndicatorList() {
         [ 
           { "$group": { "_id": { code: "$code", name: "$name" } } },
           {"$project": {_id: 0, code:"$_id.code", name: "$_id.name"}}
-        ]
+        ];
       
       var indicators = db.collection('indicators');
       indicators.aggregate(pipeline, function(err, result) {
+        if(err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
+      });
+    }
+  }
+}
+
+function getBudgetList() {
+  return Q.promise(theBudgetList);
+  
+  function theBudgetList(resolve, reject, notify) {
+    getDb().then(queryDb);
+    
+    function queryDb(db) {
+      var pipeline =
+        [
+          { "$group": {
+          		"_id": { code: "$code", name: "$name"},
+          		"years": {"$push": "$year" } } },
+          { "$project": {
+              _id: 0, code:"$_id.code",
+              name: "$_id.name",
+              years: "$years"}
+          }
+        ];
+
+      var budgets = db.collection('budgets');
+      budgets.aggregate(pipeline, function(err, result) {
         if(err) {
           reject(err);
         } else {

@@ -6897,7 +6897,7 @@ button.close {
  */
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    /*padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
 .navbar-fixed-top .nav {
@@ -6914,7 +6914,7 @@ footer {
 
 @media(min-width:768px) {
     body {
-        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+        /*padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
     }
 
     .navbar-fixed-top .navbar-brand {
@@ -6946,4 +6946,17 @@ oi-select .select-search-list-item_selection {
   border: 1px solid #eee;
   border-radius: 11px;
   padding: 20px 10px 10px 10px;
+}
+
+h2 > a {
+  color: inherit;
+  text-align:center;
+}
+
+h2 > a:hover, a:active {
+  text-decoration: none;
+}
+
+.navindex {
+ height: 20px; 
 }

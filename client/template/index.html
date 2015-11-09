@@ -1,0 +1,65 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default navindex" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="">OPEN DATA PROJECT</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">        
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2 block">
+            <h2><a ui-sref="app.compare">Compare countries</a></h2>
+            <p>Chose the countries and compare the historical data between then.</p>                
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-2 col-md-offset-1 block">
+            <h2><a ui-sref="app.budget">Explore Budgets</a></h2>
+            <p>Different visualizations for the budget of many countries</p>                
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-2 col-md-offset-1 block">
+            <h2>Experiment</h2>
+            <p>Combine data and create new creative visualizations.</p>                
+        </div>
+        <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+		
+	<!-- Main -->
+	<div class="row main" ui-view>
+	</div>
+  <!-- Footer -->
+  <footer>
+      <div class="row">
+          <div class="col-lg-12">
+              <p>Copyright &copy; Open Data Project 2015</p>
+          </div>
+      </div>
+  </footer>
+
+</div>

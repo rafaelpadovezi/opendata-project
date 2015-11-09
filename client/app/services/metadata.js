@@ -33,7 +33,8 @@
             _id: { type: ID, isPartOfKey: true},
             code: { maxLength: 3, required: true },
             countryName: {maxLength:255, required: true },
-            name: { maxLength: 63, required: true }
+            name: { maxLength: 63, required: true },
+            year: { maxLength: 63, required: true }
           }
         });
       }

@@ -18,6 +18,7 @@
         
     var service = {
       getBudget: getBudget,
+      getBudgetList: getBudetList,
       getIndicator: getIndicator,
       getIndicatorList: getIndicatorList,
       getCountries: getCountries
@@ -57,12 +58,20 @@
     function getBudget(code, year) {
       var query = budgetQuery
         .where('code', 'eq', code)
-        .where('name', 'eq', year);
+        .where('year', 'eq', year);
       return manager.executeQuery(query)
           .then(function(data) {
             return data.httpResponse.data;
           })
           .catch(onError);
+    }
+    
+    function getBudetList() {
+      return $http.get(apiService.serviceName + 'BudgetList')
+        .then(function(data) {
+          return data.data;
+        })
+        .catch(onError);
     }
     
     function onError(err) {
@@ -74,4 +83,5 @@
     }
   }
   
+  /* global angular */
 })(angular.module('app'));

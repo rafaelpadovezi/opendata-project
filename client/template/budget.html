@@ -1,0 +1,38 @@
+<!-- Sidebar -->
+<div class="col-md-3" >
+  <div  ng-controller="budgetPicker as vm">
+    <label>Chose the local</label>
+    <oi-select
+      oi-options="local.name for local in vm.locals"
+      ng-model="vm.local"
+      placeholder="Local"
+    ></oi-select>
+    
+    <label>Chose the year</label>
+    <oi-select
+      oi-options="year for year in vm.local.years"
+      ng-model="vm.year"
+      placeholder="Year"
+      ng-change="vm.onChangeYear(vm.year)"
+    ></oi-select>
+  </div>
+</div>
+<!-- /.col-md-3 -->
+<div class="col-md-9" ng-controller="budget as vm">
+  <div class="radio" ng-init="vm.chartType = 'sunburstChart'">
+    <label>
+      <input type="radio" name="optionsRadios" id="sunburstChartOptions" value="sunburstChart"
+        ng-model="vm.chartType">
+      Sunburst chart
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="bubbleChartOptions" value="bubbleChart"
+        ng-model="vm.chartType">
+      Bubble chart
+    </label>
+  </div>
+  <!-- Visualization -->
+  <chart data="vm.data[0]" options="vm.options" type="vm.chartType" />
+</div>

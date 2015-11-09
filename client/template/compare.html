@@ -1,0 +1,43 @@
+<!-- Sidebar -->
+<div class="col-md-3" >
+  <div  ng-controller="countryPicker as vm">
+    <label>Chose the countries</label>
+    <oi-select
+      oi-options="country.name for country in vm.countries"
+      ng-model="vm.country"
+      multiple
+      placeholder="Countries"
+    ></oi-select>
+  </div>
+  <div  ng-controller="indicatorPicker as vm">
+    <label>Chose the indicator</label>
+    <oi-select
+      oi-options="indicator.name for indicator in vm.indicators track by indicator._id"
+      ng-model="vm.indicator"
+      placeholder="Indicator"
+    ></oi-select>
+    </div>
+</div>
+<!-- /.col-md-3 -->
+<!-- Visualization -->
+<div class="col-md-9" ng-controller="main as vm">
+  <div class="radio" ng-init="vm.chartType = 'lineChart'">
+    <label>
+      <input type="radio" name="optionsRadios" id="lineChartOptions" value="lineChart"
+        ng-model="vm.chartType">
+      Line chart
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="barChartOptions" value="barChart"
+        ng-model="vm.chartType">
+      Bar chart
+    </label>
+  </div>
+  <chart type="vm.chartType" data="vm.data" options="vm.options">
+  </chart>
+  <bar-chart ng-if="vm.chartType === 'barChart'" data="vm.data" options="vm.options">
+  </bar-chart>
+</div>
+<!-- /.col-md-9 -->
