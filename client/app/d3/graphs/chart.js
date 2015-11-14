@@ -62,6 +62,8 @@
               case 'bubbleChart':
                 createChart = chartService.addBubbleChart;
                 break;
+              case 'treemapChart':
+                createChart = chartService.addTreemapChart;
               default:
                 // code
             }

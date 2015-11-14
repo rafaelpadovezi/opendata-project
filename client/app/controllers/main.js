@@ -8,8 +8,8 @@
     vm.data = undefined;
     vm.options = {
       size: {
-        w: 600,
-        h: 400
+        w: 800,
+        h: 600
       }
     };
     

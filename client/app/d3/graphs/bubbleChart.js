@@ -10,6 +10,7 @@
     
     function add(elem, root, options) {
       d3Service.d3().then(function(d3) {
+        var totalSize = sumEverything(root);
         var diameter = Math.min(options.size.w, options.size.h),
             format = d3.format(",d"),
             color = d3.scale.category20c();
@@ -32,7 +33,8 @@
             .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
     
         node.append("title")
-            .text(function(d) { return d.className + ": " + format(d.value); });
+            .text(function(d) { 
+              return d.className + ": " + d3.round(100*d.value/totalSize,2) + '%'; });
     
         node.append("circle")
             .attr("r", function(d) { return d.r; })
@@ -56,7 +58,16 @@
             recurse(null, root);
             return {children: classes};
         }
-
+        
+        function sumEverything(data) {
+          var sum = 0;
+          data.children.forEach(function(node) {
+            node.children.forEach(function(item) {
+              sum += item.size;
+            });
+          });
+          return sum;
+        }
       });
     }
   }

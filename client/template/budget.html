@@ -33,6 +33,13 @@
       Bubble chart
     </label>
   </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="treemapChartOptions" value="treemapChart"
+        ng-model="vm.chartType">
+      Treemap chart
+    </label>
+  </div>
   <!-- Visualization -->
   <chart data="vm.data[0]" options="vm.options" type="vm.chartType" />
 </div>

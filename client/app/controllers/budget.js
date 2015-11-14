@@ -9,7 +9,7 @@
     vm.data = undefined;
     vm.options = {
       size: {
-        w: 600,
+        w: 800,
         h: 600
       }
     };
