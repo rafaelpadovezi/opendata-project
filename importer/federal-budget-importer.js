@@ -1,7 +1,33 @@
 var request = require('request');
-var fileReader = require('./file-reader');
 var MongoClient = require('mongodb').MongoClient;
 var async = require('async');
+var LineByLineReader = require('line-by-line');
+var lr = new LineByLineReader('C:\\workspace\\data\\loa2014.nt');
+var concurrency = 20;
+var winston = require('winston');
+
+var logger = new (winston.Logger)({
+  transports: [
+    new (winston.transports.File)({
+      name: 'debug-file',
+      filename: 'filelog-debug.log',
+      level: 'debug'
+    }),
+    new (winston.transports.File)({
+      name: 'info-file',
+      filename: 'filelog-info.log',
+      level: 'info'
+    }),
+    new (winston.transports.Console)({
+      level: 'error'
+    }),
+    new (winston.transports.File)({
+      name: 'error-file',
+      filename: 'filelog-error.log',
+      level: 'error'
+    })
+  ]
+});
 
 var mongodbUrl = 'mongodb://localhost:27017/opendata-project';
 MongoClient.connect(mongodbUrl, function(err, db) {
@@ -9,48 +35,72 @@ MongoClient.connect(mongodbUrl, function(err, db) {
   var lastUrl = '';
   var count = 0;
 
-  fileReader('C:\\workspace\\data\\loa2014.nt', function(err, line) {
-    if (err) { return console.log('Reading line: ' + err); }
-    count += 1;
-    var url = line.substr(1, line.indexOf('>') - 1);
-    if (url === lastUrl) return;
+  lr.on('error', function (err) {
+    logger.error(err);
+    console.log(err);
+  });
 
-    work.push(url);
+  lr.on('line', function (line) {
+      count += 1;
+      var url = line.substr(1, line.indexOf('>') - 1);
+      if (url === lastUrl) return;
 
-    lastUrl = url;
-  }, function() {
-    console.log("Read " + count + " lines.");
+      //logger.debug('Read ' + url + '...');
+      work.push(url, function(err) {
+        lr.resume();
+        //logger.debug('resume read... Now ' + work.running() + ' workers');
+        if (err) { return console.log(err); }
+      });
+      lastUrl = url;
+  });
+
+  lr.on('end', function () {
+    db.close();
+    console.log('done!');
   });
 
   var work = async.queue(function(url, done) {
-    request(url + '.json', getItem);
+    logger.debug('Requisting ' + url + '...');
+    request({url: url + '.json', timeout: 20000}, getItem);
 
-    function getItem (error, response, body) {
+    function getItem (err, response, body) {
       if (err) {
-      console.log('err in ' + url);
-      return done();
+        logger.error(err);
+        logger.info(url);
+        return done(err);
       }
       if (!response) {
-        console.log('err in ' + url + '. No response.');
+        logger.info(url);
+        logger.error('No response in ' + url);
         return done();
       }
+      //('Got ' + response.statusCode + ' in ' + url + '...');
       if (response.statusCode != 200) {
-        console.log('err in ' + url + '. Got a ' + response.statusCode);
+        logger.info(url);
+        logger.error('err in ' + url + '. Got a ' + response.statusCode);
         return done();
       }
-      if (!error && response.statusCode == 200) {
+      if (!err && response.statusCode == 200) {
+        //logger.debug('Got OK in ' + url + '...');
         var result = JSON.parse(body).result;
         var item = parseResponse(result);
         brazilBudget.insert(item, function(err, result) {
           if (err) {
-            console.log('mongoerr in ' + url);
-            return done();
+            logger.error(err);
+            logger.info(url);
+            return done(err);
           }
+          //logger.debug('Added data from ' + url + '...');
           done();
         });
       }
     }
-  }, 20);
+  }, concurrency);
+
+  work.saturated = function() {
+    //logger.debug('pause read...');
+    lr.pause();
+  };
 
   work.drain = function() {
     console.log('Done!');
