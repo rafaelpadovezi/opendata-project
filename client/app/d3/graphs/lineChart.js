@@ -14,6 +14,7 @@
         nvd3Service.nvd3().then(function(nv) {
           
           chart = nv.models.lineWithFocusChart()
+            .color(["#9d71fc", "#0ff4fc", "#16934a", "#f9b595", "#4e3593", "#b7e050", "#63b3f9", "#105172", "#ed40de", "#45b505", "#df89ff", "#9df268", "#f43356", "#afa8ed", "#6044b5"])
             .margin({left: 100})
             .useInteractiveGuideline(true);
           
@@ -40,7 +41,7 @@
             .transition().duration(1000)
             .call(chart);
         
-          nv.utils.windowResize(chart.update);
+          //nv.utils.windowResize(chart.update);
           
           return chart;
         });

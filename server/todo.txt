@@ -1,2 +1,0 @@
-Install express and stuff needed DONE!
-Build breeze endpoints DONE!

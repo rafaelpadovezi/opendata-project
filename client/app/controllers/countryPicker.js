@@ -8,7 +8,7 @@
     
     dataService.getCountries().then(function(data) {
       vm.countries = data;
-      
+      // Set initial countries
       vm.country = vm.countries.filter(function(country) {
         return (country._id === 'BRA' || country._id === 'USA');
       });

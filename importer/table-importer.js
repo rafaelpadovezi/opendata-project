@@ -65,12 +65,13 @@ function connect(err, db) {
   }
   
   function loadIndicators(indicators) {
-    var indicatorArray = [];
     var inserts = [];
     indicators.forEach(function(item) {
       item.forEach(function(indicator) {
         if (!indicator.country) {
-        indicator.country = getCountryCode(countryData, indicator.countryName);
+          var countryCode = getCountryCode(countryData, indicator.countryName);
+          if (countryCode)
+            indicator.country = countryCode;
         }
         if (indicator.country) {
           inserts.push(function(callback) {
@@ -119,5 +120,5 @@ function getCountryCode(countries, name) {
     return item.name == name;
   });
   
-  return filtered.length > 0? filtered[0]: undefined;
+  return filtered.length > 0? filtered[0]._id: undefined;
 }

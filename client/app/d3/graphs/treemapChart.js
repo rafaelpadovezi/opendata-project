@@ -53,7 +53,6 @@
             .attr("dy", ".35em")
             .attr("text-anchor", "middle")
             .text(function(d) { return d.name; })			
-            //.style("opacity", function(d) { d.w = this.getComputedTextLength(); return d.dx > d.w ? 1 : 0; });
       			.style("display", function(d) { d.w = this.getComputedTextLength(); return d.dx > d.w ? "inline" : "none"; });
       
         d3.select(window).on("click", function() { zoom(root); });

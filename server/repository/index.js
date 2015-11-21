@@ -77,7 +77,8 @@ function getIndicatorList() {
       var pipeline =
         [ 
           { "$group": { "_id": { code: "$code", name: "$name" } } },
-          {"$project": {_id: 0, code:"$_id.code", name: "$_id.name"}}
+          {"$project": {_id: 0, code:"$_id.code", name: "$_id.name"}},
+          { "$sort" : { name : 1 } }
         ];
       
       var indicators = db.collection('indicators');

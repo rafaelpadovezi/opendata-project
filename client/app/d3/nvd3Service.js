@@ -32,6 +32,8 @@
     ]);
 })(angular);
 
+/* global nv */
+/* global d3 */
 function multiBarWithFocusChart(argument) {
   "use strict";
   //============================================================
@@ -75,7 +77,7 @@ function multiBarWithFocusChart(argument) {
     noData = null,
     dispatch = d3.dispatch('brush', 'stateChange', 'changeState', 'renderEnd'),
     controlWidth = function() {
-      return showControls ? 180 : 0
+      return showControls ? 180 : 0;
     },
     duration = 250;
   /* myAdd */
@@ -90,21 +92,21 @@ function multiBarWithFocusChart(argument) {
       left: 60
     },
     getX = function(d) {
-      return d.x
+      return d.x;
     },
     getY = function(d) {
-      return d.y
+      return d.y;
     },
     brush = d3.svg.brush(),
     brushExtent = null;
-  state.stacked = false // DEPRECATED Maintained for backward compatibility
+  state.stacked = false; // DEPRECATED Maintained for backward compatibility
   multibar.stacked(false);
   xAxis
     .orient('bottom')
     .tickPadding(5)
     .showMaxMin(true)
     .tickFormat(function(d) {
-      return d
+      return d;
     });
   x2Axis.orient('bottom').tickPadding(5);
   y2Axis.orient('right');
@@ -129,11 +131,11 @@ function multiBarWithFocusChart(argument) {
     return function() {
       return {
         active: data.map(function(d) {
-          return !d.disabled
+          return !d.disabled;
         }),
         stacked: stacked
       };
-    }
+    };
   };
   var stateSetter = function(data) {
     return function(state) {
@@ -143,7 +145,7 @@ function multiBarWithFocusChart(argument) {
         data.forEach(function(series, i) {
           series.disabled = !state.active[i];
         });
-    }
+    };
   };
 
   function chart(selection) {
@@ -177,7 +179,7 @@ function multiBarWithFocusChart(argument) {
         .update();
       // DEPRECATED set state.disableddisabled
       state.disabled = data.map(function(d) {
-        return !!d.disabled
+        return !!d.disabled;
       });
       if (!defaultState) {
         var key;
@@ -191,9 +193,9 @@ function multiBarWithFocusChart(argument) {
       }
       // Display noData message if there's nothing to show.
       if (!data || !data.length || !data.filter(function(d) {
-          return d.values.length
+          return d.values.length;
         }).length) {
-        nv.utils.noData(chart, container)
+        nv.utils.noData(chart, container);
         return chart;
       } else {
         container.selectAll('.nv-noData').remove();
@@ -586,23 +588,7 @@ function multiBarWithFocusChart(argument) {
   //============================================================
   // Event Handling/Dispatching (out of chart's scope)
   //------------------------------------------------------------
-  multibar.dispatch.on('elementMouseover.tooltip', function(evt) {
-    evt.value = chart.x()(evt.data);
-    evt['series'] = {
-      key: evt.data.key,
-      value: chart.y()(evt.data),
-      color: evt.color
-    };
-    var coordinates = [d3.event.pageX, d3.event.pageY];
-    tooltip.position({left: coordinates[0], top: coordinates[1]});
-    tooltip.data(evt).hidden(false);
-  });
-  multibar.dispatch.on('elementMouseout.tooltip', function(evt) {
-    tooltip.hidden(true);
-  });
-  multibar.dispatch.on('elementMousemove.tooltip', function(evt) {
-    tooltip();
-  });
+  
   //============================================================
   // Expose Public Variables
   //------------------------------------------------------------

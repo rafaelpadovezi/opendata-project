@@ -1,0 +1,24 @@
+<!-- Sidebar -->
+<div ng-controller="world as vm" class="row ">
+  <div class="world-options">
+    <div  ng-controller="indicatorPicker as vm" class="col-md-3 col-md-offset-3">
+      <label>Chose the indicator</label>
+      <oi-select
+        oi-options="indicator.name for indicator in vm.indicators"
+        ng-model="vm.indicator"
+        placeholder="Indicator"
+      ></oi-select>
+    </div>
+    <div class="col-md-3">
+      <label>Year</label>
+      <div>
+        <input type="number" min="{{vm.yearRange.min}}" max="{{vm.yearRange.max}}" ng-model="vm.year"/>
+      </div>
+    </div>
+  </div>
+  <br /><br /><br />
+  <hr width="98%"/>
+  <div>
+    <world-view data="vm.data" year="vm.year" style="text-align:center;"/>
+  </div>
+</div>

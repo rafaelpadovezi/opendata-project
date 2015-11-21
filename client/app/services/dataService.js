@@ -26,15 +26,38 @@
     
     return service;
     
-    function getIndicator(indicator, countries) {
+    function getIndicator() {
+      if (arguments.length === 1)
+        return _getIndicator(arguments[0]);
+      else
+        return _getIndicator(arguments[0], arguments[1]);
+    }
+    
+    function _getIndicator(indicator, countries) {
       var preds = [ ];
-      countries.forEach(function(country, i) {
-        preds.push(Predicate.create('country', 'eq', country));
-      });
-      var newPred = Predicate.or(preds);
+      if (Array.isArray(countries)) {
+        countries.forEach(function(country, i) {
+          preds.push(Predicate.create('country', 'eq', country));
+        });  
+      } else {
+        preds.push(Predicate.create('country', 'eq', countries));
+      }
+      
+      var countriesPred = Predicate.or(preds);
+      preds = [ ];
+      
+      if (Array.isArray(indicator)) {
+        indicator.forEach(function(indicatorItem) {
+          preds.push(Predicate.create('code', 'eq', indicatorItem));
+        });
+      } else {
+        preds.push(Predicate.create('code', 'eq', indicator));
+      }
+      var indicatorPred = Predicate.or(preds);
+      
       var query = indicatorQuery
-        .where(newPred)
-        .where('code', 'eq', indicator);
+        .where(countriesPred)
+        .where(indicatorPred);
       return manager.executeQuery(query)
           .then(onResponse)
           .catch(onError);

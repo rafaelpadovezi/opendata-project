@@ -1,15 +1,16 @@
+/* global _ */
 (function(module) {
   
-  module.controller('main', ['dataService', 'optionsService', controller]);
+  module.controller('main', ['dataService', 'optionsService', 'util', controller]);
   
-  function controller(dataService, optionsService) {
+  function controller(dataService, optionsService, util) {
     var vm = this;
     
     vm.data = undefined;
     vm.options = {
       size: {
         w: 800,
-        h: 600
+        h: 480
       }
     };
     
@@ -30,7 +31,7 @@
     });
     
     function getData(data) {
-      vm.data = parseData(data);
+      vm.data = util.tablerize(data);
       vm.options.axisLabel = {
           x: 'Year',
           y: data[0].name,
@@ -46,28 +47,7 @@
         vm.options.size.w = 800;
         vm.options.size.h = 600;
       }
-    }
-    
-    function parseData(data) {
-      var manipulatedData = [ ];
-      data.forEach(function(country) {
-        var manipulatedItem = {
-          'key': country.countryName,
-          'values': []
-        };
-        
-        country.values.forEach(function(item, i) {
-          manipulatedItem.values.push({
-            x: item.year,
-            y: item.value
-          });
-        });
-        
-        manipulatedData.push(manipulatedItem);
-      });
-      
-      return manipulatedData;
-    }
+    };
   }
   /*global angular*/
 })(angular.module('app'));

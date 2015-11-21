@@ -46,7 +46,7 @@
         
         var explanation = d3.select(elem.find('#chart')[0])
         		.insert("div", ":first-child")
-        		.attr('id', 'explanation')		
+        		.attr('id', 'explanation')	
         		.style('top', height/2 + height/15 + 'px')
         		.style('left', width/2 - width/11 + 'px');
         		

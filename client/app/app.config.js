@@ -1,10 +1,10 @@
 /* global angular */
 (function(module) {
   
-  module.config(['$httpProvider', '$stateProvider', '$urlRouterProvider', config]);
+  module.config(['$httpProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider', config]);
 
 
-	function config($httpProvider, $stateProvider, $urlRouterProvider) {
+	function config($httpProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
 		
 		// For any unmatched url, redirect to /state1
 		//$urlRouterProvider.otherwise("index");
@@ -16,17 +16,34 @@
 		  templateUrl: "../template/index.html"
 		})
 		.state('app', {
-		  url: 'app',
+		  url: '/app',
 		  templateUrl: '../template/app.html'
 		})
 		.state('app.compare', {
-            url: "compare",
+            url: "^/compare",
             templateUrl: "../template/compare.html"
 		})
 		.state('app.budget', {
-            url: "budget",
+            url: "^/budget",
             templateUrl: "../template/budget.html"
+		})
+		.state('app.experiment', {
+            url: "^/experiment",
+            templateUrl: "../template/experiment.html"
+		})
+		.state('app.parallel', {
+            url: "^/parallel",
+            templateUrl: "../template/parallel.html"
+		})
+		.state('app.world', {
+            url: "^/world",
+            templateUrl: "../template/world.html"
 		});
+	
 	}
+	
+	module.run(($rootScope) => {
+	  $rootScope.$on("$stateChangeError", console.log.bind(console));
+	});
   
 })(angular.module('app'));

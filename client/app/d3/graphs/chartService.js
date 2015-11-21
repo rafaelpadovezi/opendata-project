@@ -7,18 +7,29 @@
                                 ,'barChart'
                                 ,'bubbleChart'
                                 ,'treemapChart'
+                                ,'parallelCoordinatesChart'
                                 ,factory]);
   
-  function factory(lineChart, sunburstChart, barChart, bubbleChart, treemapChart) {
-    var chart = undefined;
-    
+  function factory(lineChart,
+                   sunburstChart,
+                   barChart,
+                   bubbleChart,
+                   treemapChart,
+                   parallelCoordinatesChart) {
+                     
     return {
       addSunburstChart: addSunburstChart,
       addLineChart: addLineChart,
       addBarChart: addBarChart,
       addBubbleChart: addBubbleChart,
-      addTreemapChart: addTreemapChart
+      addTreemapChart: addTreemapChart,
+      addParallelCoordinatesChart: addParallelCoordinatesChart
     };
+    
+    function addParallelCoordinatesChart(elem, data, options) {
+      elem.find('#chart svg').empty();
+      parallelCoordinatesChart.add(elem, data, options);
+    }
     
     function addBubbleChart(elem, data, options) {
       elem.find('#chart svg').empty();
@@ -32,12 +43,12 @@
     
     function addLineChart(elem, data, options) {
       elem.find('#chart svg').empty();
-      lineChart.add(elem, data, options);
+      lineChart.add(elem, data.filter(function(item) { return item.values.length > 0; }), options);
     }
     
     function addBarChart(elem, data, options) {
       elem.find('#chart svg').empty();
-      barChart.add(elem, data, options);
+      barChart.add(elem, data.filter(function(item) { return item.values.length > 0; }), options);
     }
     
     function addTreemapChart(elem, data, options) {

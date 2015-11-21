@@ -1,2 +1,0 @@
-Use 'file' to automatize the import DONE!!
-Import big budget file

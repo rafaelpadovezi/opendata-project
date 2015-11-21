@@ -6962,3 +6962,20 @@ h2 > a:hover, a:active {
 .navindex {
  height: 20px; 
 }
+
+oi-select .select-dropdown {
+  max-height:200px;
+}
+
+.experiment-panel {
+  width: 220px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid black;
+  float: left;
+  margin: 25px;
+}
+
+.sidebar-item {
+  margin-bottom: 10px;
+}

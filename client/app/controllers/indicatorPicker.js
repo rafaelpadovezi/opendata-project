@@ -8,8 +8,10 @@
     
     dataService.getIndicatorList().then(function(data) {
       vm.indicators = data;
-      
-      vm.indicator = data[0];
+      // Set initial indicator
+      vm.indicator = data.filter(function(item) {
+        return item.code === 'IT.NET.USER.P2';
+      })[0];
     });
     
     $scope.$watch('vm.indicator', function() {

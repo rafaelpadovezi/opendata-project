@@ -1,0 +1,33 @@
+<!-- Sidebar -->
+<div ng-controller="parallel as vm">
+  <div class="col-md-3" >
+    <div class="sidebar-item">
+      <label>Chose the countries</label>
+      <oi-select
+        oi-options="country.name for country in vm.countries"
+        ng-model="vm.country"
+        placeholder="Countries"
+      ></oi-select>
+    </div>
+    <div class="sidebar-item">
+      <label>Chose the indicator</label>
+      <oi-select
+        oi-options="indicator.name for indicator in vm.indicators"
+        multiple
+        ng-model="vm.indicator"
+        placeholder="Indicator"
+      ></oi-select>
+    </div>
+    <div class="sidebar-item">
+      <input type="button" name="btnCreateVisualization" class="btn btn-default"
+        value="Create Visualization" ng-click="vm.createChart()"/>
+    </div>
+  </div>
+  <!-- /.col-md-3 -->
+  <!-- Visualization -->
+  <div class="col-md-9">
+    <chart type="vm.chartType" data="vm.data" options="vm.options">
+    </chart>
+  </div>
+  <!-- /.col-md-9 -->
+</div>

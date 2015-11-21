@@ -18,3 +18,50 @@
   font-size: 13px;
   font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
 }
+
+/* World view */
+
+.country {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+}
+ 
+.graticule {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .3;
+  stroke-width: .5px;
+}
+
+.graticule.outline {
+  stroke: #333;
+  stroke-opacity: 1;
+  stroke-width: 1.5px;
+}
+
+#world-legend {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  position: absolute;
+  width: 200px;
+  padding-left: 50px;
+  color: #666;
+  z-index: -1;
+  text-align: left;
+}
+
+.color-box {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    left: -20px;
+    top: 5px;
+}
+
+.world-text-legend {
+ position: relative;
+}

@@ -1,2 +1,0 @@
-install Angular, breeze and stuff
-learn d3!!

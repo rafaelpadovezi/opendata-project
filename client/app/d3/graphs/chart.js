@@ -64,12 +64,14 @@
                 break;
               case 'treemapChart':
                 createChart = chartService.addTreemapChart;
+                break;
+              case 'parallelCoordinatesChart':
+                createChart = chartService.addParallelCoordinatesChart;
+                break;
               default:
                 // code
             }
             createChart.apply(nv.addChart, [elem, scope.data, scope.options]);
-            
-            
           }); 
         });
       }
