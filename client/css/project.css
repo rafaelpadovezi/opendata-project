@@ -6930,6 +6930,8 @@ footer {
   height: 30px;
   height: 190px;
   margin-bottom: 10px;
+  text-align: center;
+  min-width: 163px;
 }
 
 .block > h2 {
@@ -6978,4 +6980,32 @@ oi-select .select-dropdown {
 
 .sidebar-item {
   margin-bottom: 10px;
+}
+
+#source {
+  text-align: center;
+  font-size: 11px;
+  padding: 20px;
+  font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+}
+
+#description {
+  margin: auto;
+  width: 40%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.ovis {
+  font-family: 'Lucida Bright', Georgia, serif;
+  font-weight: bold;
+}
+
+#description .ovis {
+  color: #eb6864;
+}
+
+#header-title {
+  color: #eb6864;
+  font-size: 20px;
 }

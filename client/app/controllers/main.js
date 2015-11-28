@@ -36,6 +36,10 @@
           x: 'Year',
           y: data[0].name,
         };
+      if (data[0].source)
+        vm.source = 'Source: ' + data[0].source;
+      else
+        vm.source = '';
     }
 
     vm.toggleSize = function() {

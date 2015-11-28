@@ -1,0 +1,1366 @@
+MongoDB shell version: 2.6.9
+connecting to: opendata-project
+[
+	{
+		"_id" : ObjectId("565232073fec3cd4285439ed"),
+		"code" : "NY.GDP.MKTP.KD.ZG",
+		"name" : "GDP growth (annual %)",
+		"source" : "World Development Indicators",
+		"countryName" : "Argentina",
+		"country" : "ARG",
+		"values" : [
+			{
+				"year" : 1961,
+				"value" : 5.42784287951257
+			},
+			{
+				"year" : 1962,
+				"value" : -0.852021523481952
+			},
+			{
+				"year" : 1963,
+				"value" : -5.30819682651756
+			},
+			{
+				"year" : 1964,
+				"value" : 10.1302976614339
+			},
+			{
+				"year" : 1965,
+				"value" : 10.569433340343
+			},
+			{
+				"year" : 1966,
+				"value" : -0.659726171593945
+			},
+			{
+				"year" : 1967,
+				"value" : 3.19199662337057
+			},
+			{
+				"year" : 1968,
+				"value" : 4.82250078158644
+			},
+			{
+				"year" : 1969,
+				"value" : 9.67952600806881
+			},
+			{
+				"year" : 1970,
+				"value" : 3.04564331900352
+			},
+			{
+				"year" : 1971,
+				"value" : 5.65813108318032
+			},
+			{
+				"year" : 1972,
+				"value" : 1.62841651625489
+			},
+			{
+				"year" : 1973,
+				"value" : 2.81175404095772
+			},
+			{
+				"year" : 1974,
+				"value" : 5.53380439483237
+			},
+			{
+				"year" : 1975,
+				"value" : -0.0284121027669499
+			},
+			{
+				"year" : 1976,
+				"value" : -2.01825151667593
+			},
+			{
+				"year" : 1977,
+				"value" : 6.93414775537995
+			},
+			{
+				"year" : 1978,
+				"value" : -4.50612480247693
+			},
+			{
+				"year" : 1979,
+				"value" : 10.2227634648727
+			},
+			{
+				"year" : 1980,
+				"value" : 4.15176234244557
+			},
+			{
+				"year" : 1981,
+				"value" : -5.68952800019457
+			},
+			{
+				"year" : 1982,
+				"value" : -4.95717851904031
+			},
+			{
+				"year" : 1983,
+				"value" : 3.8751234240092
+			},
+			{
+				"year" : 1984,
+				"value" : 2.21177350377226
+			},
+			{
+				"year" : 1985,
+				"value" : -7.58667718413523
+			},
+			{
+				"year" : 1986,
+				"value" : 7.87577983041494
+			},
+			{
+				"year" : 1987,
+				"value" : 2.90999313057097
+			},
+			{
+				"year" : 1988,
+				"value" : -2.55690487694628
+			},
+			{
+				"year" : 1989,
+				"value" : -7.49618958372453
+			},
+			{
+				"year" : 1990,
+				"value" : -2.39895921890114
+			},
+			{
+				"year" : 1991,
+				"value" : 12.6697100866108
+			},
+			{
+				"year" : 1992,
+				"value" : 11.9407747350581
+			},
+			{
+				"year" : 1993,
+				"value" : 5.90691950110394
+			},
+			{
+				"year" : 1994,
+				"value" : 5.83620069792465
+			},
+			{
+				"year" : 1995,
+				"value" : -2.84520961517045
+			},
+			{
+				"year" : 1996,
+				"value" : 5.52668982269249
+			},
+			{
+				"year" : 1997,
+				"value" : 8.1110467739709
+			},
+			{
+				"year" : 1998,
+				"value" : 3.85017886550901
+			},
+			{
+				"year" : 1999,
+				"value" : -3.38545705440345
+			},
+			{
+				"year" : 2000,
+				"value" : -0.788998929008571
+			},
+			{
+				"year" : 2001,
+				"value" : -4.40883969595698
+			},
+			{
+				"year" : 2002,
+				"value" : -10.8944848114851
+			},
+			{
+				"year" : 2003,
+				"value" : 8.83704077566954
+			},
+			{
+				"year" : 2004,
+				"value" : 9.02957332125898
+			},
+			{
+				"year" : 2005,
+				"value" : 9.19848898286104
+			},
+			{
+				"year" : 2006,
+				"value" : 8.40286856609247
+			},
+			{
+				"year" : 2007,
+				"value" : 7.96557324797847
+			},
+			{
+				"year" : 2008,
+				"value" : 3.07494550317224
+			},
+			{
+				"year" : 2009,
+				"value" : 0.0500244563851311
+			},
+			{
+				"year" : 2010,
+				"value" : 9.45157833146635
+			},
+			{
+				"year" : 2011,
+				"value" : 8.38645145563733
+			},
+			{
+				"year" : 2012,
+				"value" : 0.801760179229987
+			},
+			{
+				"year" : 2013,
+				"value" : 2.88535188297456
+			},
+			{
+				"year" : 2014,
+				"value" : 0.469257060225758
+			}
+		],
+		"description" : "Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources."
+	},
+	{
+		"_id" : ObjectId("565232073fec3cd4285439f1"),
+		"code" : "NY.GDP.MKTP.KD.ZG",
+		"name" : "GDP growth (annual %)",
+		"source" : "World Development Indicators",
+		"countryName" : "Australia",
+		"country" : "AUS",
+		"values" : [
+			{
+				"year" : 1961,
+				"value" : 2.35092661413184
+			},
+			{
+				"year" : 1962,
+				"value" : 1.27705158758818
+			},
+			{
+				"year" : 1963,
+				"value" : 6.2124399336051
+			},
+			{
+				"year" : 1964,
+				"value" : 6.97621507509949
+			},
+			{
+				"year" : 1965,
+				"value" : 5.97981277129858
+			},
+			{
+				"year" : 1966,
+				"value" : 2.36539612983032
+			},
+			{
+				"year" : 1967,
+				"value" : 6.29684145573279
+			},
+			{
+				"year" : 1968,
+				"value" : 5.09298591983651
+			},
+			{
+				"year" : 1969,
+				"value" : 7.04960384816769
+			},
+			{
+				"year" : 1970,
+				"value" : 7.1663916495117
+			},
+			{
+				"year" : 1971,
+				"value" : 4.0081351375751
+			},
+			{
+				"year" : 1972,
+				"value" : 3.91226458539784
+			},
+			{
+				"year" : 1973,
+				"value" : 2.59830662245663
+			},
+			{
+				"year" : 1974,
+				"value" : 4.09547437529825
+			},
+			{
+				"year" : 1975,
+				"value" : 1.33744677153038
+			},
+			{
+				"year" : 1976,
+				"value" : 2.58985155519728
+			},
+			{
+				"year" : 1977,
+				"value" : 3.60698492840366
+			},
+			{
+				"year" : 1978,
+				"value" : 0.896775963338285
+			},
+			{
+				"year" : 1979,
+				"value" : 4.05340029027113
+			},
+			{
+				"year" : 1980,
+				"value" : 3.05130855449973
+			},
+			{
+				"year" : 1981,
+				"value" : 3.35825347701257
+			},
+			{
+				"year" : 1982,
+				"value" : 3.32056862189818
+			},
+			{
+				"year" : 1983,
+				"value" : -2.23061371992415
+			},
+			{
+				"year" : 1984,
+				"value" : 4.62854336859961
+			},
+			{
+				"year" : 1985,
+				"value" : 5.24963051202671
+			},
+			{
+				"year" : 1986,
+				"value" : 4.08914458429138
+			},
+			{
+				"year" : 1987,
+				"value" : 2.58504121983287
+			},
+			{
+				"year" : 1988,
+				"value" : 5.7966524833034
+			},
+			{
+				"year" : 1989,
+				"value" : 3.89599391407944
+			},
+			{
+				"year" : 1990,
+				"value" : 3.52912895654107
+			},
+			{
+				"year" : 1991,
+				"value" : -0.425953257234653
+			},
+			{
+				"year" : 1992,
+				"value" : 0.404054753104461
+			},
+			{
+				"year" : 1993,
+				"value" : 4.01561129790269
+			},
+			{
+				"year" : 1994,
+				"value" : 4.04472812292278
+			},
+			{
+				"year" : 1995,
+				"value" : 3.8811996951182
+			},
+			{
+				"year" : 1996,
+				"value" : 3.94728562524116
+			},
+			{
+				"year" : 1997,
+				"value" : 3.94347600631394
+			},
+			{
+				"year" : 1998,
+				"value" : 4.43086518513307
+			},
+			{
+				"year" : 1999,
+				"value" : 5.00425623256604
+			},
+			{
+				"year" : 2000,
+				"value" : 3.87201507119738
+			},
+			{
+				"year" : 2001,
+				"value" : 1.92866858967555
+			},
+			{
+				"year" : 2002,
+				"value" : 3.86309558738627
+			},
+			{
+				"year" : 2003,
+				"value" : 3.07924890056115
+			},
+			{
+				"year" : 2004,
+				"value" : 4.15658491348331
+			},
+			{
+				"year" : 2005,
+				"value" : 3.21646733498162
+			},
+			{
+				"year" : 2006,
+				"value" : 2.9906675777887
+			},
+			{
+				"year" : 2007,
+				"value" : 3.76014410133084
+			},
+			{
+				"year" : 2008,
+				"value" : 3.70229295461645
+			},
+			{
+				"year" : 2009,
+				"value" : 1.73181791536285
+			},
+			{
+				"year" : 2010,
+				"value" : 1.96236610119051
+			},
+			{
+				"year" : 2011,
+				"value" : 2.32147890195451
+			},
+			{
+				"year" : 2012,
+				"value" : 3.72781842816534
+			},
+			{
+				"year" : 2013,
+				"value" : 2.5119382614117
+			},
+			{
+				"year" : 2014,
+				"value" : 2.47491031885461
+			}
+		],
+		"description" : "Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources."
+	},
+	{
+		"_id" : ObjectId("565232073fec3cd428543a01"),
+		"code" : "NY.GDP.MKTP.KD.ZG",
+		"name" : "GDP growth (annual %)",
+		"source" : "World Development Indicators",
+		"countryName" : "Brazil",
+		"country" : "BRA",
+		"values" : [
+			{
+				"year" : 1961,
+				"value" : 10.2759115543009
+			},
+			{
+				"year" : 1962,
+				"value" : 5.21605942017888
+			},
+			{
+				"year" : 1963,
+				"value" : 0.87467259240843
+			},
+			{
+				"year" : 1964,
+				"value" : 3.48558230427724
+			},
+			{
+				"year" : 1965,
+				"value" : 3.0534878936691
+			},
+			{
+				"year" : 1966,
+				"value" : 4.15036023303344
+			},
+			{
+				"year" : 1967,
+				"value" : 4.91526567501121
+			},
+			{
+				"year" : 1968,
+				"value" : 11.4272823832673
+			},
+			{
+				"year" : 1969,
+				"value" : 9.7358268899127
+			},
+			{
+				"year" : 1970,
+				"value" : 8.76994747172606
+			},
+			{
+				"year" : 1971,
+				"value" : 11.2950868433503
+			},
+			{
+				"year" : 1972,
+				"value" : 12.0528022500388
+			},
+			{
+				"year" : 1973,
+				"value" : 13.9786916510758
+			},
+			{
+				"year" : 1974,
+				"value" : 9.04212031316958
+			},
+			{
+				"year" : 1975,
+				"value" : 5.20907590114406
+			},
+			{
+				"year" : 1976,
+				"value" : 9.79041016147607
+			},
+			{
+				"year" : 1977,
+				"value" : 4.60631806113791
+			},
+			{
+				"year" : 1978,
+				"value" : 3.23170956333544
+			},
+			{
+				"year" : 1979,
+				"value" : 6.76628496532688
+			},
+			{
+				"year" : 1980,
+				"value" : 9.11096015517153
+			},
+			{
+				"year" : 1981,
+				"value" : -4.39335720034832
+			},
+			{
+				"year" : 1982,
+				"value" : 0.580245553394249
+			},
+			{
+				"year" : 1983,
+				"value" : -3.40979347371643
+			},
+			{
+				"year" : 1984,
+				"value" : 5.26914314976869
+			},
+			{
+				"year" : 1985,
+				"value" : 7.94586174871282
+			},
+			{
+				"year" : 1986,
+				"value" : 7.98829510486232
+			},
+			{
+				"year" : 1987,
+				"value" : 3.59962946680903
+			},
+			{
+				"year" : 1988,
+				"value" : -0.102672718383658
+			},
+			{
+				"year" : 1989,
+				"value" : 3.27945885796419
+			},
+			{
+				"year" : 1990,
+				"value" : -3.10235594875041
+			},
+			{
+				"year" : 1991,
+				"value" : 1.51193723789993
+			},
+			{
+				"year" : 1992,
+				"value" : -0.466913209800552
+			},
+			{
+				"year" : 1993,
+				"value" : 4.66516898877852
+			},
+			{
+				"year" : 1994,
+				"value" : 5.33455170247368
+			},
+			{
+				"year" : 1995,
+				"value" : 4.41673135388506
+			},
+			{
+				"year" : 1996,
+				"value" : 2.19005943322573
+			},
+			{
+				"year" : 1997,
+				"value" : 3.38828000897225
+			},
+			{
+				"year" : 1998,
+				"value" : 0.354845946043383
+			},
+			{
+				"year" : 1999,
+				"value" : 0.490423083557715
+			},
+			{
+				"year" : 2000,
+				"value" : 4.38302453253021
+			},
+			{
+				"year" : 2001,
+				"value" : 1.27902466530881
+			},
+			{
+				"year" : 2002,
+				"value" : 3.07172489105554
+			},
+			{
+				"year" : 2003,
+				"value" : 1.22320541938372
+			},
+			{
+				"year" : 2004,
+				"value" : 5.6606735304683
+			},
+			{
+				"year" : 2005,
+				"value" : 3.14890004348749
+			},
+			{
+				"year" : 2006,
+				"value" : 3.99932427622596
+			},
+			{
+				"year" : 2007,
+				"value" : 6.00580182696642
+			},
+			{
+				"year" : 2008,
+				"value" : 5.01931601343728
+			},
+			{
+				"year" : 2009,
+				"value" : -0.235978102299356
+			},
+			{
+				"year" : 2010,
+				"value" : 7.57206715522901
+			},
+			{
+				"year" : 2011,
+				"value" : 3.91638218841442
+			},
+			{
+				"year" : 2012,
+				"value" : 1.76248880506849
+			},
+			{
+				"year" : 2013,
+				"value" : 2.74369664950311
+			},
+			{
+				"year" : 2014,
+				"value" : 0.144707354149404
+			}
+		],
+		"description" : "Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources."
+	},
+	{
+		"_id" : ObjectId("565232073fec3cd428543a07"),
+		"code" : "NY.GDP.MKTP.KD.ZG",
+		"name" : "GDP growth (annual %)",
+		"source" : "World Development Indicators",
+		"countryName" : "Canada",
+		"country" : "CAN",
+		"values" : [
+			{
+				"year" : 1961,
+				"value" : 3.16329168371287
+			},
+			{
+				"year" : 1962,
+				"value" : 7.11677926679131
+			},
+			{
+				"year" : 1963,
+				"value" : 5.18177608227349
+			},
+			{
+				"year" : 1964,
+				"value" : 6.69945668193699
+			},
+			{
+				"year" : 1965,
+				"value" : 6.63654513889813
+			},
+			{
+				"year" : 1966,
+				"value" : 6.58496540750694
+			},
+			{
+				"year" : 1967,
+				"value" : 2.91531036036223
+			},
+			{
+				"year" : 1968,
+				"value" : 5.29534186352817
+			},
+			{
+				"year" : 1969,
+				"value" : 5.26000082594564
+			},
+			{
+				"year" : 1970,
+				"value" : 7.65830168088503
+			},
+			{
+				"year" : 1971,
+				"value" : 4.11765069169961
+			},
+			{
+				"year" : 1972,
+				"value" : 5.44586296437117
+			},
+			{
+				"year" : 1973,
+				"value" : 6.96419497285794
+			},
+			{
+				"year" : 1974,
+				"value" : 3.69099303807165
+			},
+			{
+				"year" : 1975,
+				"value" : 1.82297394507698
+			},
+			{
+				"year" : 1976,
+				"value" : 5.1993131472659
+			},
+			{
+				"year" : 1977,
+				"value" : 3.4582179867992
+			},
+			{
+				"year" : 1978,
+				"value" : 3.95359821036836
+			},
+			{
+				"year" : 1979,
+				"value" : 3.80492127237993
+			},
+			{
+				"year" : 1980,
+				"value" : 2.16261157263607
+			},
+			{
+				"year" : 1981,
+				"value" : 3.50311852037999
+			},
+			{
+				"year" : 1982,
+				"value" : -3.02025881668104
+			},
+			{
+				"year" : 1983,
+				"value" : 2.56606512050593
+			},
+			{
+				"year" : 1984,
+				"value" : 5.5718580709817
+			},
+			{
+				"year" : 1985,
+				"value" : 4.67924589798263
+			},
+			{
+				"year" : 1986,
+				"value" : 2.19816306484735
+			},
+			{
+				"year" : 1987,
+				"value" : 4.04227789964354
+			},
+			{
+				"year" : 1988,
+				"value" : 4.73765171553455
+			},
+			{
+				"year" : 1989,
+				"value" : 2.37548503636202
+			},
+			{
+				"year" : 1990,
+				"value" : 0.128983847096052
+			},
+			{
+				"year" : 1991,
+				"value" : -2.12024483352197
+			},
+			{
+				"year" : 1992,
+				"value" : 0.854369659101152
+			},
+			{
+				"year" : 1993,
+				"value" : 2.60737116668767
+			},
+			{
+				"year" : 1994,
+				"value" : 4.55400930136669
+			},
+			{
+				"year" : 1995,
+				"value" : 2.73849606505485
+			},
+			{
+				"year" : 1996,
+				"value" : 1.67960929754342
+			},
+			{
+				"year" : 1997,
+				"value" : 4.2533428904334
+			},
+			{
+				"year" : 1998,
+				"value" : 4.13818547686098
+			},
+			{
+				"year" : 1999,
+				"value" : 4.99725552239632
+			},
+			{
+				"year" : 2000,
+				"value" : 5.12312497613398
+			},
+			{
+				"year" : 2001,
+				"value" : 1.68837360013423
+			},
+			{
+				"year" : 2002,
+				"value" : 2.80186567653693
+			},
+			{
+				"year" : 2003,
+				"value" : 1.92532140709557
+			},
+			{
+				"year" : 2004,
+				"value" : 3.13878677545101
+			},
+			{
+				"year" : 2005,
+				"value" : 3.16313012283543
+			},
+			{
+				"year" : 2006,
+				"value" : 2.62177910413905
+			},
+			{
+				"year" : 2007,
+				"value" : 2.00831569783621
+			},
+			{
+				"year" : 2008,
+				"value" : 1.1754233902368
+			},
+			{
+				"year" : 2009,
+				"value" : -2.71146728162502
+			},
+			{
+				"year" : 2010,
+				"value" : 3.37424855472442
+			},
+			{
+				"year" : 2011,
+				"value" : 2.96010266033507
+			},
+			{
+				"year" : 2012,
+				"value" : 1.92286499418768
+			},
+			{
+				"year" : 2013,
+				"value" : 2.00350816224805
+			},
+			{
+				"year" : 2014,
+				"value" : 2.53177022484232
+			}
+		],
+		"description" : "Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources."
+	},
+	{
+		"_id" : ObjectId("565232073fec3cd428543a0c"),
+		"code" : "NY.GDP.MKTP.KD.ZG",
+		"name" : "GDP growth (annual %)",
+		"source" : "World Development Indicators",
+		"countryName" : "China",
+		"country" : "CHN",
+		"values" : [
+			{
+				"year" : 1961,
+				"value" : -27.2999999874665
+			},
+			{
+				"year" : 1962,
+				"value" : -5.59999999980575
+			},
+			{
+				"year" : 1963,
+				"value" : 10.1999999802968
+			},
+			{
+				"year" : 1964,
+				"value" : 18.2999999988796
+			},
+			{
+				"year" : 1965,
+				"value" : 17.000000002565
+			},
+			{
+				"year" : 1966,
+				"value" : 10.7000000120576
+			},
+			{
+				"year" : 1967,
+				"value" : -5.70000000054841
+			},
+			{
+				"year" : 1968,
+				"value" : -4.10000000520178
+			},
+			{
+				"year" : 1969,
+				"value" : 16.9000000043629
+			},
+			{
+				"year" : 1970,
+				"value" : 19.3999999924204
+			},
+			{
+				"year" : 1971,
+				"value" : 7.00000000120686
+			},
+			{
+				"year" : 1972,
+				"value" : 3.80000000536884
+			},
+			{
+				"year" : 1973,
+				"value" : 7.8999999980115
+			},
+			{
+				"year" : 1974,
+				"value" : 2.30000000138975
+			},
+			{
+				"year" : 1975,
+				"value" : 8.69999999640687
+			},
+			{
+				"year" : 1976,
+				"value" : -1.5999999975367
+			},
+			{
+				"year" : 1977,
+				"value" : 7.5999999955455
+			},
+			{
+				"year" : 1978,
+				"value" : 11.8819061682819
+			},
+			{
+				"year" : 1979,
+				"value" : 7.60000000000041
+			},
+			{
+				"year" : 1980,
+				"value" : 7.80669144981407
+			},
+			{
+				"year" : 1981,
+				"value" : 5.17241379310323
+			},
+			{
+				"year" : 1982,
+				"value" : 9.01639344262331
+			},
+			{
+				"year" : 1983,
+				"value" : 10.7518796992478
+			},
+			{
+				"year" : 1984,
+				"value" : 15.2070604209096
+			},
+			{
+				"year" : 1985,
+				"value" : 13.5533294048321
+			},
+			{
+				"year" : 1986,
+				"value" : 8.92579138557366
+			},
+			{
+				"year" : 1987,
+				"value" : 11.7198666031443
+			},
+			{
+				"year" : 1988,
+				"value" : 11.3006396588487
+			},
+			{
+				"year" : 1989,
+				"value" : 4.21455938697306
+			},
+			{
+				"year" : 1990,
+				"value" : 3.93382352941178
+			},
+			{
+				"year" : 1991,
+				"value" : 9.26777502653005
+			},
+			{
+				"year" : 1992,
+				"value" : 14.2764648753643
+			},
+			{
+				"year" : 1993,
+				"value" : 13.9376770538242
+			},
+			{
+				"year" : 1994,
+				"value" : 13.0780706116361
+			},
+			{
+				"year" : 1995,
+				"value" : 10.9938434476693
+			},
+			{
+				"year" : 1996,
+				"value" : 9.92472266244057
+			},
+			{
+				"year" : 1997,
+				"value" : 9.22688772751847
+			},
+			{
+				"year" : 1998,
+				"value" : 7.85348952318094
+			},
+			{
+				"year" : 1999,
+				"value" : 7.61817347407062
+			},
+			{
+				"year" : 2000,
+				"value" : 8.4292821606255
+			},
+			{
+				"year" : 2001,
+				"value" : 8.29837441006833
+			},
+			{
+				"year" : 2002,
+				"value" : 9.09090909090875
+			},
+			{
+				"year" : 2003,
+				"value" : 10.0199733688415
+			},
+			{
+				"year" : 2004,
+				"value" : 10.0756429652046
+			},
+			{
+				"year" : 2005,
+				"value" : 11.3523914238591
+			},
+			{
+				"year" : 2006,
+				"value" : 12.6882251044612
+			},
+			{
+				"year" : 2007,
+				"value" : 14.1949616723985
+			},
+			{
+				"year" : 2008,
+				"value" : 9.62337748620061
+			},
+			{
+				"year" : 2009,
+				"value" : 9.23355109472857
+			},
+			{
+				"year" : 2010,
+				"value" : 10.6317082336546
+			},
+			{
+				"year" : 2011,
+				"value" : 9.4845062015219
+			},
+			{
+				"year" : 2012,
+				"value" : 7.75029759317401
+			},
+			{
+				"year" : 2013,
+				"value" : 7.68380996955
+			},
+			{
+				"year" : 2014,
+				"value" : 7.35100002182192
+			}
+		],
+		"description" : "Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources."
+	},
+	{
+		"_id" : ObjectId("565232073fec3cd428543a28"),
+		"code" : "NY.GDP.MKTP.KD.ZG",
+		"name" : "GDP growth (annual %)",
+		"source" : "World Development Indicators",
+		"countryName" : "Spain",
+		"country" : "ESP",
+		"values" : [
+			{
+				"year" : 1961,
+				"value" : 11.8386741948328
+			},
+			{
+				"year" : 1962,
+				"value" : 9.95343810301819
+			},
+			{
+				"year" : 1963,
+				"value" : 9.59649887419762
+			},
+			{
+				"year" : 1964,
+				"value" : 5.30851024557086
+			},
+			{
+				"year" : 1965,
+				"value" : 6.25313489898551
+			},
+			{
+				"year" : 1966,
+				"value" : 7.24606030950743
+			},
+			{
+				"year" : 1967,
+				"value" : 4.3403384170755
+			},
+			{
+				"year" : 1968,
+				"value" : 6.59702013758275
+			},
+			{
+				"year" : 1969,
+				"value" : 8.90701555527119
+			},
+			{
+				"year" : 1970,
+				"value" : 6.2011583805929
+			},
+			{
+				"year" : 1971,
+				"value" : 4.64947379960535
+			},
+			{
+				"year" : 1972,
+				"value" : 8.14975149724395
+			},
+			{
+				"year" : 1973,
+				"value" : 7.78846874019779
+			},
+			{
+				"year" : 1974,
+				"value" : 5.61876502213498
+			},
+			{
+				"year" : 1975,
+				"value" : 0.542219973174667
+			},
+			{
+				"year" : 1976,
+				"value" : 3.3037925609011
+			},
+			{
+				"year" : 1977,
+				"value" : 2.83855933404121
+			},
+			{
+				"year" : 1978,
+				"value" : 1.463012970341
+			},
+			{
+				"year" : 1979,
+				"value" : 0.0415354041394949
+			},
+			{
+				"year" : 1980,
+				"value" : 2.20874326812701
+			},
+			{
+				"year" : 1981,
+				"value" : -0.132464461693218
+			},
+			{
+				"year" : 1982,
+				"value" : 1.246459949152
+			},
+			{
+				"year" : 1983,
+				"value" : 1.77010938605409
+			},
+			{
+				"year" : 1984,
+				"value" : 1.7846964174632
+			},
+			{
+				"year" : 1985,
+				"value" : 2.32142754400984
+			},
+			{
+				"year" : 1986,
+				"value" : 3.25332830177992
+			},
+			{
+				"year" : 1987,
+				"value" : 5.54711226276056
+			},
+			{
+				"year" : 1988,
+				"value" : 5.09433140184836
+			},
+			{
+				"year" : 1989,
+				"value" : 4.82702390046252
+			},
+			{
+				"year" : 1990,
+				"value" : 3.78140080277815
+			},
+			{
+				"year" : 1991,
+				"value" : 2.54599006481222
+			},
+			{
+				"year" : 1992,
+				"value" : 0.929228760176954
+			},
+			{
+				"year" : 1993,
+				"value" : -1.03150453933699
+			},
+			{
+				"year" : 1994,
+				"value" : 2.3832002924072
+			},
+			{
+				"year" : 1995,
+				"value" : 2.75749769742353
+			},
+			{
+				"year" : 1996,
+				"value" : 2.674721660076
+			},
+			{
+				"year" : 1997,
+				"value" : 3.68961165202535
+			},
+			{
+				"year" : 1998,
+				"value" : 4.3059542415332
+			},
+			{
+				"year" : 1999,
+				"value" : 4.48486868182931
+			},
+			{
+				"year" : 2000,
+				"value" : 5.28910118083496
+			},
+			{
+				"year" : 2001,
+				"value" : 4.00108422897544
+			},
+			{
+				"year" : 2002,
+				"value" : 2.87980059848287
+			},
+			{
+				"year" : 2003,
+				"value" : 3.18755548720884
+			},
+			{
+				"year" : 2004,
+				"value" : 3.16675469308447
+			},
+			{
+				"year" : 2005,
+				"value" : 3.72304200279056
+			},
+			{
+				"year" : 2006,
+				"value" : 4.17412628443334
+			},
+			{
+				"year" : 2007,
+				"value" : 3.76894582162947
+			},
+			{
+				"year" : 2008,
+				"value" : 1.11592526632904
+			},
+			{
+				"year" : 2009,
+				"value" : -3.57379402541028
+			},
+			{
+				"year" : 2010,
+				"value" : 0.013804782633315
+			},
+			{
+				"year" : 2011,
+				"value" : -0.617622685813586
+			},
+			{
+				"year" : 2012,
+				"value" : -2.08874523372383
+			},
+			{
+				"year" : 2013,
+				"value" : -1.22995198071686
+			},
+			{
+				"year" : 2014,
+				"value" : 1.38937193947896
+			}
+		],
+		"description" : "Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources."
+	}
+]

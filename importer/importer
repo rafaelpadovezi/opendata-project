@@ -37,3 +37,23 @@ rm datafiles/worldbank/sp.dyn.le00.in/[Content_Types].xml
 #unzip datafiles/worldbank/ny.gdp.mktp.kd.zg.zip -d datafiles/worldbank/ny.gdp.mktp.kd.zg
 #rm datafiles/worldbank/ny.gdp.mktp.kd.zg.zip
 #rm datafiles/worldbank/ny.gdp.mktp.kd.zg/[Content_Types].xml
+
+curl -o datafiles/worldbank/si.pov.gini.zip http://api.worldbank.org/v2/en/indicator/si.pov.gini?downloadformat=csv
+unzip datafiles/worldbank/si.pov.gini.zip -d datafiles/worldbank/si.pov.gini
+rm datafiles/worldbank/si.pov.gini.zip
+rm datafiles/worldbank/si.pov.gini/[content_types].xml
+
+curl -o datafiles/worldbank/sl.uem.totl.ne.zs.zip http://api.worldbank.org/v2/en/indicator/sl.uem.totl.ne.zs?downloadformat=csv
+unzip datafiles/worldbank/sl.uem.totl.ne.zs.zip -d datafiles/worldbank/sl.uem.totl.ne.zs
+rm datafiles/worldbank/sl.uem.totl.ne.zs.zip
+rm datafiles/worldbank/sl.uem.totl.ne.zs/[content_types].xml
+
+curl -o datafiles/worldbank/se.adt.litr.zs.zip http://api.worldbank.org/v2/en/indicator/se.adt.litr.zs?downloadformat=csv
+unzip datafiles/worldbank/se.adt.litr.zs.zip -d datafiles/worldbank/se.adt.litr.zs
+rm datafiles/worldbank/se.adt.litr.zs.zip
+rm datafiles/worldbank/se.adt.litr.zs/[content_types].xml
+
+curl -o datafiles/worldbank/ny.gdp.mktp.cd.zip http://api.worldbank.org/v2/en/indicator/ny.gdp.mktp.cd?downloadformat=csv
+unzip datafiles/worldbank/ny.gdp.mktp.cd.zip -d datafiles/worldbank/ny.gdp.mktp.cd
+rm datafiles/worldbank/ny.gdp.mktp.cd.zip
+rm datafiles/worldbank/ny.gdp.mktp.cd/[content_types].xml

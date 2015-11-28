@@ -32,10 +32,13 @@
         if (scope.data === undefined)
           return;
         if (scope.options == undefined) {
-          if (scope.options.size == undefined) {
-            scope.options.size.h = 400;
-            scope.options.size.w = 600;
-          }
+          scope.options = { };
+        }
+        if (scope.options.size == undefined) {
+          scope.options.size = {
+            h: 480,
+            w: 600
+          };
         }
         if (!scope.type)
           return;

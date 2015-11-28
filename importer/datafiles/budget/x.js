@@ -1,0 +1,1 @@
+printjson( db.indicators.find({country:{$in:['BRA','ESP','CAN','ARG','AUS','CHN']}, code:'NY.GDP.MKTP.KD.ZG'}).pretty().toArray() )
