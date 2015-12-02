@@ -6,26 +6,15 @@
   function factory() {
     var observerCallbacks = [];
     var options = { };
-    //register an observer
+    
     function registerObserverCallback (callback){
       observerCallbacks.push(callback);
     }
   
-    function setCountries(countries) {
-      options.countries = countries;
-      notifyObservers();
-    }
-    
-    function setBudget(budget) {
-      options.budget = {
-        year: budget.year,
-        code: budget.code
-      };
-      notifyObservers();
-    }
-    
-    function setIndicator(indicator) {
-      options.indicator = indicator;
+    function setOption(obj) {
+      Object.keys(obj).forEach(function(key) {
+        options[key] = obj[key];
+      });
       notifyObservers();
     }
     
@@ -35,11 +24,28 @@
       });
     }
     
+    function reset() {
+      options = { };
+    }
+    
+    function search() {
+      if (arguments.length === 1) {
+        return options[arguments[0]];
+      }
+      if (arguments.length === 2) {
+        options[arguments[0]] = arguments[1];
+        notifyObservers();
+        return arguments[1];
+      }
+      throw "unvalid number of arguments";
+    }
+    
     return {
       onChangeOptions: registerObserverCallback,
-      setCountries: setCountries,
-      setIndicator: setIndicator,
-      setBudget: setBudget
+      setOption: setOption,
+      reset: reset,
+      search: search,
+      $$search: options
     };
   }
   

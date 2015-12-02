@@ -15,10 +15,10 @@
     };
     
     optionsService.onChangeOptions(function(options) {
-      if (!options.budget)
+      if (!options.year || !options.code)
         return;
         
-      dataService.getBudget(options.budget.code, options.budget.year)
+      dataService.getBudget(options.code, options.year)
         .then(getData);
     });
     

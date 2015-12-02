@@ -41,9 +41,5 @@
 		});
 	
 	}
-	
-	module.run(($rootScope) => {
-	  $rootScope.$on("$stateChangeError", console.log.bind(console));
-	});
   
 })(angular.module('app'));

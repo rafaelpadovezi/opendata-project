@@ -10,10 +10,20 @@
       vm.locals = data;
       vm.years = [];
       
-      vm.local = vm.locals.filter(function(item) {
-        return item.code === 'BRA';
-      })[0];
-      vm.year = '2014';
+      
+      if (optionsService.search('year') && optionsService.search('code')) {
+        vm.local = vm.locals.filter(function(item) {
+          return item.code === optionsService.search('code');
+        })[0];
+        
+        vm.year = optionsService.search('year');  
+      } else {
+        vm.local = vm.locals.filter(function(item) {
+          return item.code === 'BRA';
+        })[0];
+        vm.year = '2014';
+      }
+      
       onChangeYear(vm.year);
     });
     
@@ -25,10 +35,8 @@
       if (!year)
         return;
         
-      optionsService.setBudget({
-        year: year,
-        code: vm.local.code
-      });
+      optionsService.search('year', year);
+      optionsService.search('code', vm.local.code);
     }
   }
   

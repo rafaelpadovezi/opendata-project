@@ -9,16 +9,28 @@
     dataService.getCountries().then(function(data) {
       vm.countries = data;
       // Set initial countries
-      vm.country = vm.countries.filter(function(country) {
-        return (country._id === 'BRA' || country._id === 'USA');
-      });
+      if (optionsService.search('countries')) {
+        vm.country = vm.countries.filter(function(country) {
+          return optionsService.search('countries').indexOf(country._id) > -1; 
+        });
+      }
+      else {
+        vm.country = vm.countries.filter(function(country) {
+          return (country._id === 'BRA' || country._id === 'USA');
+        });
+      }
     });
     
     $scope.$watch('vm.country', function() {
       if (!vm.country) {
         return;
       }
-      optionsService.setCountries(vm.country);
+      
+      optionsService.setOption({
+        countries: vm.country.map(function(country) {
+          return country._id;
+        })
+      });
     });
   }
   

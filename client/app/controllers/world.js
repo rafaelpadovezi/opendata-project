@@ -1,25 +1,39 @@
 /* global angular */
 (function(module) {
   
-  module.controller('world', ['dataService', 'optionsService', controller]);
+  module.controller('world', ['$scope', 'dataService', 'optionsService', controller]);
   
-  function controller(dataService, optionsService) {
+  function controller($scope, dataService, optionsService) {
     var vm = this;
     
     optionsService.onChangeOptions(function(options) {
-      if (!options.indicator)
+      if (!options.indicators)
         return;
       
-      dataService.getIndicator(options.indicator.code).then(function(data) {
+      dataService.getIndicator(options.indicators).then(function(data) {
         vm.data = worldData(data);
         vm.yearRange = getYearRange(vm.data);
         vm.year = Number(vm.yearRange.max);
-        console.log(vm.data);
-        console.log(vm.yearRange);
       });
       
       function worldData(data) {
-        var parsedData = {};
+        var parsedData = data.reduce(function(accData, country) {
+          country.values.forEach(function(item) {
+            if (!accData[item.year])
+              accData[item.year] = [];
+            accData[item.year].push({
+              value: item.value,
+              code: country.country,
+              name: country.countryName
+            });
+          });
+          
+          return accData;
+        },
+        {});
+        
+        return parsedData;
+        
         data.forEach(function(country) {
           country.values.forEach(function(item) {
             if (!parsedData[item.year]) {
